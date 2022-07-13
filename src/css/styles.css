@@ -1,0 +1,7 @@
+body {
+    background-color: #0c1022;
+    background: linear-gradient(220.55deg, #00136c 0%, #0c1022 100%);
+    font-family: monospace, 'Courier New', Courier;
+    overflow-x: hidden;
+    color: white;
+}
