@@ -4,6 +4,7 @@ const audio1 = document.querySelector('#audio1');
 const audio2 = document.querySelector('#audio2');
 const audio3 = document.querySelector('#audio3');
 var timeControl;
+var timeState;
 var stateApp;
 // ! Events Listeners
 loadPage(); // TODO Poner en el body efecto de ***mix-blend-mode: multiply*** para generar efecto en los blancos (como screen en After Effects)
@@ -14,9 +15,9 @@ function eventsListeners() { // TODO comprobar si existe el loader
     container.addEventListener('click', () => {
         startApp('click');
     });
-    // container.addEventListener('dblclick', () => { // TODO Arregla bug doble click
-    //     startApp('click');
-    // });
+    container.addEventListener('dblclick', () => { // TODO Arregla bug doble click
+        startApp('click');
+    });
     container.addEventListener('mouseout', () => {
         startApp('leave');
     });
@@ -24,21 +25,25 @@ function eventsListeners() { // TODO comprobar si existe el loader
 
 // ! Functions
 function timeOutControl() {
-    timeControl = setTimeout(() => { // TODO Comprobar si existe el loader
-        container.classList.remove('containerClick');
-        container.classList.add('containerOut')
-        audio2.play();
-        audio2.volume = 0.7;
-        setInterval(() => { // TODO Cmprobar si existe el loader
-        document.querySelector('.loader').remove(); // TODO Cmprobar si existe el loader
-        audio3.play();
-        audio3.volume = 0.2;
-        }, 1000);
-    }, 5000);
+    if (stateApp && timeState === false) {
+        timeState = true;
+        timeControl = setTimeout(() => { // TODO Comprobar si existe el loader
+            container.classList.remove('containerClick');
+            container.classList.add('containerOut')
+            audio2.play();
+            audio2.volume = 0.7;
+            setInterval(() => { // TODO Cmprobar si existe el loader
+            document.querySelector('.loader').remove(); // TODO Cmprobar si existe el loader
+            audio3.play();
+            audio3.volume = 0.2;
+            }, 1000);
+        }, 5000);
+    }
 }
 
 function timeOutControlStop() {
     clearTimeout(timeControl);
+    console.log('timeOut Leave')
 }
 
 function startApp(e) {
@@ -74,6 +79,7 @@ function startApp(e) {
             }
             timeOutControlStop()
             stateApp = false;
+            timeState = false;
         }
     }
 }
