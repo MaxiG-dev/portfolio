@@ -7,7 +7,7 @@ loadPage();
 function loadPage() {
     document.addEventListener('DOMContentLoaded', eventsListeners);
 }
-function eventsListeners() {
+function eventsListeners() { // TODO comprobar si existe el loader
     container.addEventListener('click', () => {
         startApp('click');
     });
@@ -30,14 +30,14 @@ function startApp(e) {
         container.classList.add('startApp')
         container.classList.remove('containerHover');
         document.querySelector('.loader').classList.add('startAppBg')
-        setTimeout(() => {
-            if (stateApp && stateAppVer) {
+        setTimeout(() => { // TODO Comprobar si existe el loader
+            if (stateApp) {
                 container.classList.remove('containerClick');
                 container.classList.add('containerOut')
                 audio2.play();
                 audio2.volume = 0.7;
-                setInterval(() => {
-                document.querySelector('.loader').remove();
+                setInterval(() => { // TODO Cmprobar si existe el loader
+                document.querySelector('.loader').remove(); // TODO Cmprobar si existe el loader
                 audio3.play();
                 audio3.volume = 0.2;
                 }, 1000);
@@ -45,21 +45,24 @@ function startApp(e) {
         }, 5000);
     }
     if (e === 'leave') {
-        audio1.setAttribute('loop', false);
-        container.classList.add('containerHover');
-        container.classList.remove('containerClick');
-        container.classList.remove('containerOut');
-        container.classList.remove('startApp');
-        document.querySelector('.loader').classList.remove('startAppBg')
-
-        if (stateApp) {
-            const timeInterval = setInterval(() => {
-                audio1.volume -= 0.1;
-            }, 100);
-            setTimeout(() => {
-                clearInterval(timeInterval);
-            }, 500);
+        if (document.querySelector('.loader') !== null) {
+            audio1.setAttribute('loop', false);
+            container.classList.add('containerHover');
+            container.classList.remove('containerClick');
+            container.classList.remove('containerOut');
+            container.classList.remove('startApp');
+            document.querySelector('.loader').classList.remove('startAppBg')
+    
+            if (stateApp) {
+                const timeInterval = setInterval(() => {
+                    audio1.volume -= 0.1;
+                }, 100);
+                setTimeout(() => {
+                    clearInterval(timeInterval);
+                }, 500);
+            }
+            stateApp = false;
         }
-        stateApp = false;
+
     }
 }
