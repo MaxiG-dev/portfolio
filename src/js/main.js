@@ -41,7 +41,7 @@ function startApp(e) {
     if (
         e === 'leave' &&
         document.querySelector('.loader') !== null &&
-        stateApp
+        stateApp && stateApp !== 'initialized'
     ) {
         container.classList.add('containerHover');
         container.classList.remove('containerClick');
@@ -73,6 +73,7 @@ function timeOutControl() {
         timeControl = setTimeout(() => {
             container.classList.remove('containerClick');
             container.classList.add('containerOut');
+            stateApp = 'initialized';
             audio2.play();
             audio2.volume = 0.7;
             setTimeout(() => {
