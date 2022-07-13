@@ -5,6 +5,12 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    background: linear-gradient(220.55deg, #00136c 0%, #0c1022 100%);
+    transition: background-color 2000ms;
+    -webkit-transition: background-color 2000ms;
+    -moz-transition: background-color 2000ms;
+    -ms-transition: background-color 2000ms;
+    -o-transition: background-color 2000ms;
 }
 .container {
     position: relative;
@@ -88,11 +94,11 @@
 }
 
 .container {
-    transition: transform 2000ms;
-    -webkit-transition: transform 2000ms;
-    -moz-transition: transform 2000ms;
-    -ms-transition: transform 2000ms;
-    -o-transition: transform 2000ms;
+    transition: transform 1000ms;
+    -webkit-transition: transform 1000ms;
+    -moz-transition: transform 1000ms;
+    -ms-transition: transform 1000ms;
+    -o-transition: transform 1000ms;
 }
 .containerHover:hover {
     transform: scale(105%);
@@ -108,13 +114,63 @@
     -ms-transform: scale(150%);
     -o-transform: scale(150%);
 }
+.containerOut {
+    transform: scale(3000%);
+    -webkit-transform: scale(3000%);
+    -moz-transform: scale(3000%);
+    -ms-transform: scale(3000%);
+    -o-transform: scale(3000%);
+}
 
-@keyframes enterPage {
-    0% {
-    transform: scale(100%);
+.startAppBg {
+    animation: startAppBg 10000ms infinite;
+    -webkit-animation: startAppBg 10000ms infinite;
+}
+
+.startApp {
+    animation: startApp 10000ms infinite;
+    -webkit-animation: startApp 10000ms infinite;
+}
+
+@keyframes startAppBg {
+    20% {
+        background: linear-gradient(220.55deg, #00136c 0%, #0c1022 100%);
+    }
+    50% {
+        background: linear-gradient(220.55deg, #00136c 0%, #0c1022 100%);
+    }
+    55% {
+        background: rgba(25, 25, 25, 1);
     }
     100% {
-    transform: scale(200%);
+        background: rgba(25, 25, 25, 1);
+    }
+}
+
+@keyframes startApp {
+    0% {
+        box-shadow: 0px 0px 0px 0px rgb(25, 25, 25);
+    }
+    20% {
+        box-shadow: 0px 0px 100px 0px rgb(25, 25, 25);
+
+}
+    50% {
+        color: white;
+        filter: blur(0px);
+        -webkit-filter: blur(0px);
+        background: rgba(25, 25, 25, 0);
+}
+    55% {
+        color: rgb(25, 25, 25);
+        box-shadow: 0px 0px 50px 500px rgb(25, 25, 25);
+
+        filter: blur(10px);
+        -webkit-filter: blur(10px);
+        background: rgba(25, 25, 25, 1);
+    }
+    100% {
+        color: rgb(25, 25, 25);
     }
 }
 

@@ -17,27 +17,44 @@ function eventsListeners() {
 }
 
 // ! Functions
+
 function startApp(e) {
-    const audio = document.querySelector('audio');
+    const audio1 = document.querySelector('#audio1');
+    const audio2 = document.querySelector('#audio2');
+    const audio3 = document.querySelector('#audio3');
     if (e === 'click') {
         stateApp = true;
-        audio.play();
-        audio.volume = 0.5;
+        audio1.play();
+        audio1.volume = 0.5;
         container.classList.add('containerClick');
+        container.classList.add('startApp')
         container.classList.remove('containerHover');
+        document.querySelector('.loader').classList.add('startAppBg')
         setTimeout(() => {
-            if (stateApp) {
-                console.log('Eventos cancelados');
+            if (stateApp && stateAppVer) {
+                container.classList.remove('containerClick');
+                container.classList.add('containerOut')
+                audio2.play();
+                audio2.volume = 0.7;
+                setInterval(() => {
+                document.querySelector('.loader').remove();
+                audio3.play();
+                audio3.volume = 0.2;
+                }, 1000);
             }
         }, 5000);
     }
     if (e === 'leave') {
-        audio.setAttribute('loop', false);
+        audio1.setAttribute('loop', false);
         container.classList.add('containerHover');
         container.classList.remove('containerClick');
+        container.classList.remove('containerOut');
+        container.classList.remove('startApp');
+        document.querySelector('.loader').classList.remove('startAppBg')
+
         if (stateApp) {
             const timeInterval = setInterval(() => {
-                audio.volume -= 0.1;
+                audio1.volume -= 0.1;
             }, 100);
             setTimeout(() => {
                 clearInterval(timeInterval);
