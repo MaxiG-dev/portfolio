@@ -33,9 +33,27 @@ body {
     right: 0;
     position: fixed;
     cursor: pointer;
-    overflow: hidden;
+    overflow: show;
     opacity: 0;
     z-index: -1;
+}
+
+.speaker svg{
+    filter: invert();
+    -webkit-filter: invert();
+    opacity: 0.5;
+    width: 30px;
+    height: 30px;
+}
+.speaker svg:nth-child(2) {
+    opacity: 0.3;
+    width: 45px;
+    height: 45px;
+    transform: translate(-6.5px, -7.7px);
+    -webkit-transform: translate(-6.5px, -7.7px);
+    -moz-transform: translate(-6.5px, -7.7px);
+    -ms-transform: translate(-6.5px, -7.7px);
+    -o-transform: translate(-6.5px, -7.7px);
 }
 .speaker-on {
     transition: opacity 5000ms;
@@ -45,17 +63,6 @@ body {
     -o-transition: opacity 5000ms;
     z-index: 1000;
     opacity: 1;
-}
-.speaker svg{
-    filter: invert();
-    -webkit-filter: invert();
-    opacity: 0.3;
-    width: 30px;
-    height: 30px;
-}
-.speaker-off {
-    width: 17px!important;
-    right: 13px;
 }
 .nav {
     position: fixed;

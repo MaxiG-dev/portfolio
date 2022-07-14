@@ -14,26 +14,20 @@ function loadPage() {
     document.addEventListener('DOMContentLoaded', eventsListeners);
 }
 function eventsListeners() {
+    window.addEventListener('keypress', () => {
+        startApp('click');
+    })
     container.addEventListener('click', () => {
         startApp('click');
     });
     container.addEventListener('mouseleave', () => {
         startApp('leave');
     });
-    document.querySelector('.main-container span svg').addEventListener('click', () => {
-        if (volume === 1) {
-            document.querySelector('.speaker').classList.add('speaker-off');
-            volume = 0;
-            audio1.volume = 0;
-            audio2.volume = 0;
-            audio3.volume = 0;
-        } else {
-            document.querySelector('.speaker').classList.remove('speaker-off');
-            volume = 1;
-            audio1.volume = 0.5;
-            audio2.volume = 0.7;
-            audio3.volume = 0.1;
-        }
+    document.querySelector('.speaker svg').addEventListener('click', () => {
+        volumeControl('off');
+    });
+    document.querySelector('.speaker svg:nth-child(2)').addEventListener('click', () => {
+        volumeControl('on');
     });
 }
 function initializingApp() {
@@ -124,4 +118,24 @@ function timeOutControl() {
 
 function timeOutControlStop() {
     clearTimeout(timeControl);
+}
+
+function volumeControl(e) {
+    if (e === 'off') {
+        // document.querySelector('.speaker').classList.add('speaker-off');
+        document.querySelector('.speaker svg:nth-child(1)').classList.add('hidden');
+        document.querySelector('.speaker svg:nth-child(2)').classList.remove('hidden');
+        volume = 0;
+        audio1.volume = 0;
+        audio2.volume = 0;
+        audio3.volume = 0;
+    } else {
+        // document.querySelector('.speaker').classList.remove('speaker-off');
+        document.querySelector('.speaker svg:nth-child(1)').classList.remove('hidden');
+        document.querySelector('.speaker svg:nth-child(2)').classList.add('hidden');
+        volume = 1;
+        audio1.volume = 0.5;
+        audio2.volume = 0.7;
+        audio3.volume = 0.1;
+    }
 }
