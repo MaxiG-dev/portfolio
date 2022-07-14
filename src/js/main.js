@@ -6,6 +6,7 @@ const audio3 = document.querySelector('#audio3');
 var timeControl;
 var timeState = false;
 var stateApp = false;
+var volume = 1;
 
 // ! Events Listeners
 loadPage(); // TODO Poner en el body efecto de ***mix-blend-mode: multiply*** para generar efecto en los blancos (como screen en After Effects)
@@ -16,12 +17,44 @@ function eventsListeners() {
     container.addEventListener('click', () => {
         startApp('click');
     });
-    container.addEventListener('mouseout', () => {
+    container.addEventListener('mouseleave', () => {
         startApp('leave');
     });
+    document.querySelector('.main-container span svg').addEventListener('click', () => {
+        if (volume === 1) {
+            document.querySelector('.speaker').classList.add('speaker-off');
+            volume = 0;
+            audio1.volume = 0;
+            audio2.volume = 0;
+            audio3.volume = 0;
+        } else {
+            document.querySelector('.speaker').classList.remove('speaker-off');
+            volume = 1;
+            audio1.volume = 0.5;
+            audio2.volume = 0.7;
+            audio3.volume = 0.1;
+        }
+    });
+}
+function initializingApp() {
+    document.querySelector('.loader').remove();
+    document.querySelector('.nav').classList.add('nav-on');
+    if (volume !== 0 ){
+        audio3.volume = volume-0.9;
+    }
+    document.querySelector('.home').classList.remove('hidden');
+    document.querySelector('.projects').classList.remove('hidden');
+    document.querySelector('.experiments').classList.remove('hidden');
+    document.querySelector('.about-me').classList.remove('hidden');
+    app();
 }
 
+
 // ! Functions
+function app() {
+    console.log('App Iniciada');
+}
+
 function startApp(e) {
     if (
         e === 'click' &&
@@ -29,9 +62,12 @@ function startApp(e) {
         stateApp === false
     ) {
         stateApp = true;
+        document.querySelector('.speaker').classList.add('speaker-on');
         audio1.play();
         audio1.currentTime = 0;
-        audio1.volume = 0.5;
+        if (volume !== 0 ){
+            audio1.volume = volume-0.5;
+        }
         container.classList.add('containerClick');
         container.classList.add('startApp');
         container.classList.remove('containerHover');
@@ -75,11 +111,12 @@ function timeOutControl() {
             container.classList.add('containerOut');
             stateApp = 'initialized';
             audio2.play();
-            audio2.volume = 0.7;
+            if (volume !== 0 ){
+                audio2.volume = volume-0.3;
+            }
             setTimeout(() => {
-                document.querySelector('.loader').remove();
+                initializingApp();
                 audio3.play();
-                audio3.volume = 0.2;
             }, 1000);
         }, 5000);
     }

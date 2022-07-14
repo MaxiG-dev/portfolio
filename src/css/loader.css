@@ -2,6 +2,7 @@
     width: 100vw;
     height: 100vh;
     display: flex;
+    position: fixed;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -23,28 +24,8 @@
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-
 }
-.container::after {
-    content: '';
-    position: absolute;
-    align-self: center;
-    width: 500px;
-    height: 500px;
-    animation: border1 4000ms linear infinite;
-    -webkit-animation: border1 4000ms linear infinite;
-    animation-delay: -2000ms;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    box-shadow: 0px 1px 3px -1px #fff,
-    0px 5px 5px -5px #d000d4,
-    0px 20px 50px -20px #d000d4,
-    0px 20px 80px -20px #d000d4;
 
-}
 .container::before {
     content: '';
     position: absolute;
@@ -58,10 +39,14 @@
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    box-shadow: 0px 1px 3px -1px #fff,
+    box-shadow: 0px 2px 3px -1px #fff,
     0px 5px 5px -5px #008cff,
     0px 20px 50px -20px #008cff,
-    0px 20px 80px -20px #008cff;
+    0px 20px 80px -20px #008cff,
+    0px -2.5px 3px -1px #fff,
+    0px -5px 5px -5px #d000d4,
+    0px -20px 50px -5px #d000d4,
+    0px -20px 80px -5px #d000d4;
 }
 .container span {
     position: absolute;
@@ -130,46 +115,6 @@
     -webkit-animation: startApp 10000ms infinite;
 }
 
-@keyframes startAppBg {
-    20% {
-        background: linear-gradient(220.55deg, #00136c 0%, #0c1022 100%);
-    }
-    50% {
-        background: linear-gradient(220.55deg, #00136c 0%, #0c1022 100%);
-    }
-    55% {
-        background: rgba(25, 25, 25, 1);
-    }
-    100% {
-        background: rgba(25, 25, 25, 1);
-    }
-}
-
-@keyframes startApp {
-    0% {
-        box-shadow: 0px 0px 0px 0px rgb(25, 25, 25);
-    }
-    20% {
-        box-shadow: 0px 0px 100px 0px rgb(25, 25, 25);
-    }
-    50% {
-        color: white;
-        filter: blur(0px);
-        -webkit-filter: blur(0px);
-        background: rgba(25, 25, 25, 0);
-    }
-    55% {
-        color: rgb(25, 25, 25);
-        box-shadow: 0px 0px 50px 500px rgb(25, 25, 25);
-        filter: blur(10px);
-        -webkit-filter: blur(10px);
-        background: rgba(25, 25, 25, 1);
-    }
-    100% {
-        color: rgb(25, 25, 25);
-    }
-}
-
 .row1,
 .row2,
 .row3,
@@ -181,7 +126,7 @@
     margin: 0 2vw;
 }
 
-.loader .container p {
+.loader .container span p {
     opacity: 0;
     font-size: 4em;
     transform: translateY(-1em);
@@ -190,9 +135,11 @@
     -ms-transform: translateY(-1em);
     -o-transform: translateY(-1em);
     font-weight: bold;
+    text-shadow: 0px 0px 5px #fff;
 }
 
 .loader .container h1 {
+    text-shadow: 0px 0px 3px #fff;
     font-size: 4em;
     margin: 0;
     position: relative;
@@ -201,7 +148,6 @@
     overflow: hidden;
     white-space: nowrap;
 }
-
 
 .row1 h1 {
     animation: typing1 1000ms steps(8) both;
@@ -243,7 +189,70 @@
     -webkit-animation: blinkCursor 1000ms steps(3) infinite;
     animation-delay: 3400ms;
 }
+.help {
+    color: rgba(255, 255, 255, 1);
+    position: relative;
+    font-size: 1.1em;
+    text-align: center;
+    overflow: visible;
+    opacity: 0;
+    top: 88%;
+    animation: help 10000ms linear infinite;
+    -webkit-animation: help 10000ms linear infinite;
+    animation-delay: 10s;
+}
 
+/* ? Media queries */
+@media only screen and (max-width: 520px) {
+    .row1, .row2, .row3, .row4 {
+        height: 35px;
+        width: 158.34px;
+    }
+    .row4 {
+        width: 175.93px;
+    }
+    .container h1,
+    .container span p {
+        font-size: 2em!important;
+    }
+    .container {
+        width: 280px;
+        height: 280px;
+    }
+    .container::after {
+        width: 280px;
+        height: 280px;
+    }
+    .container::before {
+        width: 280px;
+        height: 280px;
+    }
+    .help {
+        font-size: 0.9em!important;
+        top: 80%!important;
+    }
+    /* ? Animations mobile */
+    @keyframes typing1 {
+        0% {
+            display: block;
+            width: 0px;
+        }
+        100% {
+            display: block;
+            width: 140.75px;
+        }
+    }
+    @keyframes typing2 {
+        0% {
+            display: block;
+            width: 0px;
+        }
+        100% {
+            display: block;
+            width: 158.34px;
+        }
+    }
+}
 
 /* ? Animations */
 @keyframes blinkCursor {
@@ -288,5 +297,52 @@
         -moz-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
         -o-transform: rotate(360deg);
+    }
+}
+@keyframes startAppBg {
+    20% {
+        background: linear-gradient(220.55deg, #00136c 0%, #0c1022 100%);
+    }
+    50% {
+        background: linear-gradient(220.55deg, #00136c 0%, #0c1022 100%);
+    }
+    55% {
+        background: rgba(25, 25, 25, 1);
+    }
+    100% {
+        background: rgba(25, 25, 25, 1);
+    }
+}
+@keyframes startApp {
+    0% {
+        box-shadow: 0px 0px 0px 0px rgb(25, 25, 25);
+    }
+    20% {
+        box-shadow: 0px 0px 100px 0px rgb(25, 25, 25);
+    }
+    22% {
+    background: rgba(25, 25, 25, 0);
+    }
+    50% {
+        color: white;
+        filter: blur(0px);
+        -webkit-filter: blur(0px);
+        background: rgba(25, 25, 25, 1);
+    }
+    55% {
+        color: rgb(25, 25, 25);
+        box-shadow: 0px 0px 150px 300px rgb(25, 25, 25);
+        filter: blur(10px);
+        -webkit-filter: blur(10px);
+        background: rgba(25, 25, 25, 1);
+    }
+    100% {
+        color: rgb(25, 25, 25);
+    }
+}
+@keyframes help {
+    0%,100% { opacity: 0
+    }
+    50% { opacity: 1
     }
 }

@@ -1,6 +1,103 @@
+* {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    color: white;
+    font-family: consolas, monospace, 'Courier New', Courier;
+    scroll-behavior: smooth;
+}
+*::-webkit-scrollbar {
+    display: none;
+}
 body {
     background-color: rgb(25, 25, 25);
-    font-family: consolas, monospace, 'Courier New', Courier;
     overflow-x: hidden;
-    color: white;
+}
+.main-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    width: 100vw;
+    height: 100vh;
+}
+.home, .projects, .experiments, .about-me {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.hidden {
+    display: none;
+}
+.speaker {
+    width: 30px;
+    height: 30px;
+    margin: 20px;
+    right: 0;
+    position: fixed;
+    cursor: pointer;
+    overflow: hidden;
+    opacity: 0;
+    z-index: -1;
+}
+.speaker-on {
+    transition: opacity 5000ms;
+    -webkit-transition: opacity 5000ms;
+    -moz-transition: opacity 5000ms;
+    -ms-transition: opacity 5000ms;
+    -o-transition: opacity 5000ms;
+    z-index: 1000;
+    opacity: 1;
+}
+.speaker svg{
+    filter: invert();
+    -webkit-filter: invert();
+    opacity: 0.3;
+    width: 30px;
+    height: 30px;
+}
+.speaker-off {
+    width: 17px!important;
+    right: 13px;
+}
+.nav {
+    position: fixed;
+    width: 30px;
+    height: 150px;
+    top: calc(50vh - 75px);
+    right: 0;
+    margin-right: 7vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    z-index: -1;
+}
+.nav-on {
+    transition: opacity 5000ms;
+    -webkit-transition: opacity 5000ms;
+    -moz-transition: opacity 5000ms;
+    -ms-transition: opacity 5000ms;
+    -o-transition: opacity 5000ms;
+    z-index: 1000;
+    opacity: 1;
+}
+.nav div {
+    background-color: rgba(255, 255, 255, 0.05);
+    width: 3px;
+    height: 3px;
+    cursor: pointer;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transition: background-color 500ms, box-shadow 500ms, border-color 500ms;
+    -webkit-transition: background-color 500ms, box-shadow 500ms, border-color 500ms;
+    -moz-transition: background-color 500ms, box-shadow 500ms, border-color 500ms;
+    -ms-transition: background-color 500ms, box-shadow 500ms, border-color 500ms;
+    -o-transition: background-color 500ms, box-shadow 500ms, border-color 500ms;
+    border: rgba(255, 255, 255, 0) 5px double;
+}
+.nav div:hover {
+    box-shadow: 0px 0px 10px 1px #fff;
+    border: #fff 5px double;
 }

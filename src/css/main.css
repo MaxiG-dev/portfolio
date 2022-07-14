@@ -1,3 +1,7 @@
 @import "normalize.css";
 @import "styles.css";
 @import "loader.css";
+@import "home.css";
+@import "projects.css";
+@import "experiments.css";
+@import "about-me.css";
