@@ -22,7 +22,6 @@ body {
     scroll-snap-align: start;
     scroll-snap-stop: always;
 }
-
 .hidden {
     display: none;
 }
@@ -37,7 +36,6 @@ body {
     opacity: 0;
     z-index: -1;
 }
-
 .speaker svg{
     filter: invert();
     -webkit-filter: invert();
@@ -87,8 +85,11 @@ body {
     z-index: 1000;
     opacity: 1;
 }
+.nav a {
+    text-decoration: none;
+}
 .nav div {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.2);
     width: 3px;
     height: 3px;
     cursor: pointer;
@@ -108,3 +109,51 @@ body {
     box-shadow: 0px 0px 10px 1px #fff;
     border: #fff 5px double;
 }
+/* .nav div p {
+    position: fixed;
+    font-size: 1.2em;
+    text-decoration: none;
+    text-align: right;
+    border-bottom: #fff 1px solid;
+    white-space: nowrap;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    overflow: hidden;
+    opacity: 0;
+    margin: 0;
+    display: none;
+    transition: opacity 800ms;
+    -webkit-transition: opacity 800ms;
+    -moz-transition: opacity 800ms;
+    -ms-transition: opacity 800ms;
+    -o-transition: opacity 800ms;
+}
+.section1 p {
+    right: 6px;
+    top: 25px;
+    width: 62.23px;
+}
+.section2 p {
+    right: 0px;
+    top: 41px;
+    width: 104.46px;
+}
+.section3 p {
+    right: -5px;
+    top: 52px;
+    width: 136.12px;
+}
+.section4 p {
+    right: 0px;
+    top: 41px;
+    width: 104.46px;
+}
+.p-display {
+    display: block!important;
+}
+.p-animation {
+    opacity: 1!important;
+} */
