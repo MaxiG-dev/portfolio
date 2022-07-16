@@ -428,6 +428,7 @@
         filter: blur(0px);
         -webkit-filter: blur(0px);
         background: rgba(25, 25, 25, 1);
+        opacity: 1;
     }
     55% {
         color: rgb(25, 25, 25);
@@ -435,9 +436,11 @@
         filter: blur(10px);
         -webkit-filter: blur(10px);
         background: rgba(25, 25, 25, 1);
+        opacity: 0;
     }
     100% {
         color: rgb(25, 25, 25);
+        opacity: 0;
     }
 }
 @keyframes help {

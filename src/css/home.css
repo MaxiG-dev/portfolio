@@ -14,6 +14,8 @@
 }
 .home .name {
     grid-area: 2 / 2 / 3 / 7;
+    animation: slide-in-left 2s cubic-bezier(0,.83,0,1) both;
+    -webkit-animation: slide-in-left 2s cubic-bezier(0,.83,0,1) both;
 }
 .home .name h1{
     margin: 0;
@@ -30,9 +32,11 @@
 .home .text {
     grid-area: 3 / 2 / 5 / 8;
     height: 100%;
-    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+    text-shadow: 0px 0px 3px rgb(0, 0, 0),    0px 0px 5px rgb(0, 0, 0),    0px 0px 10px rgb(0, 0, 0);
     font-size: 1.3em;
     z-index: 1;
+    animation: slide-in-left 5s cubic-bezier(0,.83,0,1) both;
+    -webkit-animation: slide-in-left 5s cubic-bezier(0,.83,0,1) both;
 }
 .home .contact {
     width: 100vw;
@@ -45,6 +49,9 @@
     padding-bottom: 50px;
     font-size: 1.3em;
     text-shadow: 0px 0px 10px rgb(0, 0, 0);
+    animation: slide-in-bottom 5s cubic-bezier(0,.83,0,1) both;
+    -webkit-animation: slide-in-bottom 5s cubic-bezier(0,.83,0,1) both;
+    animation-delay: 4s;
 }
 .home .contact a:hover {
     text-shadow: 0px 0px 10px rgb(255, 255, 255);
@@ -58,6 +65,9 @@
     grid-area: 2 / 5 / 5 / 8;
     display: flex;
     justify-content: center;
+    animation: slide-in-left 5s cubic-bezier(0,.83,0,1) both;
+    -webkit-animation: slide-in-left 5s cubic-bezier(0,.83,0,1) both;
+    animation-delay: 3s;
 }
 .notebook #notebook {
     min-width: 450px;
@@ -188,6 +198,55 @@
 }
 .notebook svg:nth-child(2){
     position: relative;
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes slide-in-bottom {
+    0% {
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
+        opacity: 0;
+}
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 @keyframes code-display-1 {
