@@ -2,7 +2,7 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
     color: white;
-    font-family: consolas, monospace, 'Courier New', Courier;
+    font-family: monospace, 'Courier New', Courier;
     scroll-behavior: smooth;
 }
 *::-webkit-scrollbar {

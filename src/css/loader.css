@@ -307,10 +307,10 @@
 @media only screen and (max-width: 395px) {
     .row1, .row2, .row3, .row4 {
         height: 35px;
-        width: 128.33px;
+        width: 138.33px;
     }
     .row4 {
-        width: 140.77px;
+        width: 150.77px;
     }
     .container h1,
     .container span p {
