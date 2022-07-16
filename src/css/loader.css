@@ -307,10 +307,10 @@
 @media only screen and (max-width: 395px) {
     .row1, .row2, .row3, .row4 {
         height: 35px;
-        width: 131.85px;
+        width: 128.33px;
     }
     .row4 {
-        width: 144.29px;
+        width: 140.77px;
     }
     .container h1,
     .container span p {
@@ -340,7 +340,7 @@
         }
         100% {
             display: block;
-            width: 140.75px;
+            width: 100.21px;
         }
     }
     @keyframes typing2 {
@@ -350,7 +350,7 @@
         }
         100% {
             display: block;
-            width: 158.34px;
+            width: 130.21px;
         }
     }
 }
