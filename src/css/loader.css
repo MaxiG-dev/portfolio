@@ -203,6 +203,7 @@
 }
 
 /* ? Media queries */
+
 @media only screen and (max-width: 520px) {
     .row1, .row2, .row3, .row4 {
         height: 35px;
@@ -253,7 +254,106 @@
         }
     }
 }
-
+@media only screen and (max-height: 520px) {
+    .row1, .row2, .row3, .row4 {
+        height: 35px;
+        width: 158.34px;
+    }
+    .row4 {
+        width: 175.93px;
+    }
+    .container h1,
+    .container span p {
+        font-size: 2em!important;
+    }
+    .container {
+        width: 280px;
+        height: 280px;
+    }
+    .container::after {
+        width: 280px;
+        height: 280px;
+    }
+    .container::before {
+        width: 280px;
+        height: 280px;
+    }
+    .help {
+        font-size: 0.9em!important;
+        top: 80%!important;
+    }
+    /* ? Animations mobile */
+    @keyframes typing1 {
+        0% {
+            display: block;
+            width: 0px;
+        }
+        100% {
+            display: block;
+            width: 140.75px;
+        }
+    }
+    @keyframes typing2 {
+        0% {
+            display: block;
+            width: 0px;
+        }
+        100% {
+            display: block;
+            width: 158.34px;
+        }
+    }
+}
+@media only screen and (max-width: 395px) {
+    .row1, .row2, .row3, .row4 {
+        height: 35px;
+        width: 138.33px;
+    }
+    .row4 {
+        width: 150.77px;
+    }
+    .container h1,
+    .container span p {
+        font-size: 1.6em!important; 
+    }
+    .container {
+        width: 280px;
+        height: 280px;
+    }
+    .container::after {
+        width: 280px;
+        height: 280px;
+    }
+    .container::before {
+        width: 280px;
+        height: 280px;
+    }
+    .help {
+        font-size: 0.9em!important;
+        top: 80%!important;
+    }
+    /* ? Animations mobile */
+    @keyframes typing1 {
+        0% {
+            display: block;
+            width: 0px;
+        }
+        100% {
+            display: block;
+            width: 100.21px;
+        }
+    }
+    @keyframes typing2 {
+        0% {
+            display: block;
+            width: 0px;
+        }
+        100% {
+            display: block;
+            width: 130.21px;
+        }
+    }
+}
 /* ? Animations */
 @keyframes blinkCursor {
     0%,75% {
@@ -328,6 +428,7 @@
         filter: blur(0px);
         -webkit-filter: blur(0px);
         background: rgba(25, 25, 25, 1);
+        opacity: 1;
     }
     55% {
         color: rgb(25, 25, 25);
@@ -335,9 +436,11 @@
         filter: blur(10px);
         -webkit-filter: blur(10px);
         background: rgba(25, 25, 25, 1);
+        opacity: 0;
     }
     100% {
         color: rgb(25, 25, 25);
+        opacity: 0;
     }
 }
 @keyframes help {
