@@ -10,7 +10,7 @@
 }
 body {
     background-color: rgb(25, 25, 25);
-    overflow-x: hidden!important;
+    overflow-x: hidden;
 }
 .main-container {
     scroll-snap-type: y mandatory;
@@ -23,7 +23,7 @@ body {
     scroll-snap-stop: always;
 }
 .hidden {
-    display: none;
+    display: none!important;
 }
 .speaker {
     width: 30px;
