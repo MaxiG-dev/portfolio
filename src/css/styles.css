@@ -10,7 +10,7 @@
 }
 body {
     background-color: rgb(25, 25, 25);
-    overflow-x: hidden;
+    overflow-x: hidden!important;
 }
 .main-container {
     scroll-snap-type: y mandatory;
