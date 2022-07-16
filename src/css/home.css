@@ -3,7 +3,8 @@
     height: 100vh;
     scroll-margin-block: 0;
     background-color: rgb(25, 25, 25);
-    background: linear-gradient(-220.55deg, rgb(25, 25, 25) 0%, #181818 100%);    margin: auto;
+    background: linear-gradient(-220.55deg, rgb(25, 25, 25) 0%, #181818 100%);
+    margin: auto;
     display: grid;
     grid-template-columns: 10% repeat(2, 15%) 20% repeat(2, 15%) 10%;
     grid-template-rows: 10% repeat(3, auto) 10%;
