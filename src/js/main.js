@@ -9,10 +9,11 @@ var stateApp = false;
 var volume = 1;
 
 // ! Events Listeners
-loadPage(); // TODO Poner en el body efecto de ***mix-blend-mode: multiply*** para generar efecto en los blancos (como screen en After Effects)
+loadPage();
 function loadPage() {
     document.addEventListener('DOMContentLoaded', eventsListeners);
 }
+
 function eventsListeners() {
     window.addEventListener('keypress', () => {
         startApp('click');
@@ -30,6 +31,8 @@ function eventsListeners() {
         volumeControl('on');
     });
 }
+
+// ! Functions
 function initializingApp() {
     document.querySelector('.loader').remove();
     document.querySelector('.nav').classList.add('nav-on');
@@ -37,14 +40,12 @@ function initializingApp() {
         audio3.volume = volume-0.9;
     }
     document.querySelector('.home').classList.remove('hidden');
-    document.querySelector('.projects').classList.remove('hidden');
-    document.querySelector('.experiments').classList.remove('hidden');
-    document.querySelector('.about-me').classList.remove('hidden');
+    // document.querySelector('.projects').classList.remove('hidden');
+    // document.querySelector('.experiments').classList.remove('hidden');
+    // document.querySelector('.about-me').classList.remove('hidden');
     app();
 }
 
-
-// ! Functions
 function app() {
     console.log('App Iniciada');
 }
@@ -122,7 +123,6 @@ function timeOutControlStop() {
 
 function volumeControl(e) {
     if (e === 'off') {
-        // document.querySelector('.speaker').classList.add('speaker-off');
         document.querySelector('.speaker svg:nth-child(1)').classList.add('hidden');
         document.querySelector('.speaker svg:nth-child(2)').classList.remove('hidden');
         volume = 0;
@@ -130,7 +130,6 @@ function volumeControl(e) {
         audio2.volume = 0;
         audio3.volume = 0;
     } else {
-        // document.querySelector('.speaker').classList.remove('speaker-off');
         document.querySelector('.speaker svg:nth-child(1)').classList.remove('hidden');
         document.querySelector('.speaker svg:nth-child(2)').classList.add('hidden');
         volume = 1;
