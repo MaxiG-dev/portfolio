@@ -203,6 +203,7 @@
 }
 
 /* ? Media queries */
+
 @media only screen and (max-width: 520px) {
     .row1, .row2, .row3, .row4 {
         height: 35px;
@@ -253,7 +254,106 @@
         }
     }
 }
-
+@media only screen and (max-height: 520px) {
+    .row1, .row2, .row3, .row4 {
+        height: 35px;
+        width: 158.34px;
+    }
+    .row4 {
+        width: 175.93px;
+    }
+    .container h1,
+    .container span p {
+        font-size: 2em!important;
+    }
+    .container {
+        width: 280px;
+        height: 280px;
+    }
+    .container::after {
+        width: 280px;
+        height: 280px;
+    }
+    .container::before {
+        width: 280px;
+        height: 280px;
+    }
+    .help {
+        font-size: 0.9em!important;
+        top: 80%!important;
+    }
+    /* ? Animations mobile */
+    @keyframes typing1 {
+        0% {
+            display: block;
+            width: 0px;
+        }
+        100% {
+            display: block;
+            width: 140.75px;
+        }
+    }
+    @keyframes typing2 {
+        0% {
+            display: block;
+            width: 0px;
+        }
+        100% {
+            display: block;
+            width: 158.34px;
+        }
+    }
+}
+@media only screen and (max-width: 395px) {
+    .row1, .row2, .row3, .row4 {
+        height: 35px;
+        width: 131.85px;
+    }
+    .row4 {
+        width: 144.29px;
+    }
+    .container h1,
+    .container span p {
+        font-size: 1.6em!important; 
+    }
+    .container {
+        width: 280px;
+        height: 280px;
+    }
+    .container::after {
+        width: 280px;
+        height: 280px;
+    }
+    .container::before {
+        width: 280px;
+        height: 280px;
+    }
+    .help {
+        font-size: 0.9em!important;
+        top: 80%!important;
+    }
+    /* ? Animations mobile */
+    @keyframes typing1 {
+        0% {
+            display: block;
+            width: 0px;
+        }
+        100% {
+            display: block;
+            width: 140.75px;
+        }
+    }
+    @keyframes typing2 {
+        0% {
+            display: block;
+            width: 0px;
+        }
+        100% {
+            display: block;
+            width: 158.34px;
+        }
+    }
+}
 /* ? Animations */
 @keyframes blinkCursor {
     0%,75% {
