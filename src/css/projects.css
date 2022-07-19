@@ -2,8 +2,125 @@
     width: 100vw;
     height: 100vh;
     scroll-margin-block: 0;
-    background-color: rgb(7, 0, 49);
+    background-color: rgb(25, 25, 25);
+    background: linear-gradient(-220.55deg, rgb(25, 25, 25) 0%, #181818 100%);
 }
-.projects h1 {
+.projects .title {
+    padding: 30px;
+}
+.projects .title h1 {
+    margin: auto;
+    width: max-content;
+    font-size: 4em;
+    overflow: normal;
+    color: #43b4ff;
+    background: #00bede;
+    background: linear-gradient(90deg, #ded300 0%, #ff6600 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 10px rgba(255, 38, 0, 0.3);
+}
+.projects .slider {
+    border: #fff solid 2px;
+    max-width: 1250px;
+    max-height: calc(9 * 1250px / 16); /* 9 * 100% / 16 */
+    width: 90vw;
+    height: calc(9 * 90vw / 16); /* 9 * 100% / 16 */
+    margin: auto;
+}
+
+/* 
+.home {
+    width: 100vw;
+    height: 100vh;
+    scroll-margin-block: 0;
+    background-color: rgb(25, 25, 25);
+    background: linear-gradient(-220.55deg, rgb(25, 25, 25) 0%, #181818 100%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 10% repeat(2, 15%) 20% repeat(2, 15%) 10%;
+    grid-template-rows: 10% repeat(3, auto) 10%;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    overflow: hidden;
+}
+.home .name {
+    grid-area: 2 / 2 / 3 / 7;
+    animation: slide-in-left 2s cubic-bezier(0,.83,0,1) both;
+    -webkit-animation: slide-in-left 2s cubic-bezier(0,.83,0,1) both;
+}
+.home .name h1{
     margin: 0;
+    width: max-content;
+    font-size: 4em;
+    overflow: normal;
+    color: #43b4ff;
+    background: #00bede;
+    background: linear-gradient(90deg, #00bede 0%, #c100ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 10px rgba(85, 0, 255, 0.3);
 }
+.home .text {
+    grid-area: 3 / 2 / 5 / 8;
+    height: 100%;
+    text-shadow: 0px 0px 3px rgb(0, 0, 0),    0px 0px 5px rgb(0, 0, 0),    0px 0px 10px rgb(0, 0, 0);
+    font-size: 1.3em;
+    z-index: 1;
+    animation: slide-in-left 5s cubic-bezier(0,.83,0,1) both;
+    -webkit-animation: slide-in-left 5s cubic-bezier(0,.83,0,1) both;
+}
+.home .contact {
+    width: 100vw;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    font-size: 1.3em;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+    animation: slide-in-bottom 5s cubic-bezier(0,.83,0,1) both;
+    -webkit-animation: slide-in-bottom 5s cubic-bezier(0,.83,0,1) both;
+    animation-delay: 4s;
+}
+.home .contact a:hover {
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+    transition: text-shadow 1s;
+    -webkit-transition: text-shadow 1s;
+    -moz-transition: text-shadow 1s;
+    -ms-transition: text-shadow 1s;
+    -o-transition: text-shadow 1s;
+}
+
+@media only screen and (max-width: 810px) {
+    .home .name {
+        font-size: 0.75em;
+    }
+    .home .text {
+        font-size: 1em;
+    }
+    .home .contact {
+        font-size: 1em;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .home .name {
+        font-size: 0.65em;
+    }
+    .home .contact {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .home .contact a {
+        padding: 5px;
+    }
+}
+@media only screen and (max-width: 525px) {
+    .home .name {
+        font-size: 0.37em;
+    }
+} */
