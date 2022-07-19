@@ -1,6 +1,5 @@
 .home {
     width: 100vw;
-    height: 100vh;
     background-color: rgb(25, 25, 25);
     background: linear-gradient(-220.55deg, rgb(25, 25, 25) 0%, #181818 100%);
     margin: auto;
@@ -14,6 +13,7 @@
     z-index: 1000;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
 }
+
 .home .name {
     grid-area: 2 / 2 / 3 / 7;
     animation: slide-in-left 2s cubic-bezier(0, 0.83, 0, 1) both;

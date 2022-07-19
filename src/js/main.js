@@ -3,8 +3,10 @@ const container = document.querySelector('.container');
 const audio1 = document.querySelector('#audio1');
 const audio2 = document.querySelector('#audio2');
 const audio3 = document.querySelector('#audio3');
+const audio4 = document.querySelector('#audio4');
 var timeControl;
-var timeState = false;
+var stateAnimation = false;
+var stateTime = false;
 var stateApp = false;
 var volume = 1;
 
@@ -43,46 +45,10 @@ function initializingApp() {
     app();
 }
 
-
 // ! Functions
 function app() {
-    console.log('App Iniciada');
-    document.querySelector('.nav .section1').addEventListener('click', () => {scrollWin(0);});
-    document.querySelector('.nav .section2').addEventListener('click', () => {scrollWin(1);});
-    document.querySelector('.nav .section3').addEventListener('click', () => {scrollWin(2);});
-    document.querySelector('.nav .section4').addEventListener('click', () => {scrollWin(3);});
-
-    function scrollWin(e) {
-        const height = window.innerHeight
-        window.scrollTo(0, (height * e));
-
-        // const home = document.querySelector('.home');
-        // const projects = document.querySelector('.projects');
-        // const experiments = document.querySelector('.experiments');
-        // function opacityOff() {
-        //     home.classList.remove('opacity-off')
-        //     projects.classList.remove('opacity-off')
-        //     experiments.classList.remove('opacity-off')
-        // }
-        // if (e === 0) {
-        //     opacityOff();
-        // }
-        // if (e === 1) {
-        //     opacityOff();
-        //     home.classList.add('opacity-off')
-        // }
-        // if (e === 2) {
-        //     opacityOff();
-        //     home.classList.add('opacity-off')
-        //     projects.classList.add('opacity-off')
-        // }
-        // if (e === 3) {
-        //     opacityOff();
-        //     home.classList.add('opacity-off')
-        //     projects.classList.add('opacity-off')
-        //     experiments.classList.add('opacity-off')
-        // }
-    }
+    scrollEvents();
+    audio4.volume = 0.3;
 }
 
 function startApp(e) {
@@ -125,24 +91,24 @@ function startApp(e) {
                 audio1.pause();
             }, 500);
         }
-        if (timeState) {
+        if (stateTime) {
             timeOutControlStop();
         }
         stateApp = false;
-        timeState = false;
+        stateTime = false;
     }
 }
 
 function timeOutControl() {
-    if (stateApp && timeState === false) {
-        timeState = true;
+    if (stateApp && stateTime === false) {
+        stateTime = true;
         timeControl = setTimeout(() => {
             container.classList.remove('containerClick');
             container.classList.add('containerOut');
             stateApp = 'initialized';
             audio2.play();
             if (volume !== 0 ){
-                audio2.volume = volume-0.3;
+                audio2.volume = volume-0.4;
             }
             setTimeout(() => {
                 initializingApp();
@@ -158,20 +124,112 @@ function timeOutControlStop() {
 
 function volumeControl(e) {
     if (e === 'off') {
-        // document.querySelector('.speaker').classList.add('speaker-off');
         document.querySelector('.speaker svg:nth-child(1)').classList.add('hidden');
         document.querySelector('.speaker svg:nth-child(2)').classList.remove('hidden');
         volume = 0;
         audio1.volume = 0;
         audio2.volume = 0;
         audio3.volume = 0;
+        audio4.volume = 0;
     } else {
-        // document.querySelector('.speaker').classList.remove('speaker-off');
         document.querySelector('.speaker svg:nth-child(1)').classList.remove('hidden');
         document.querySelector('.speaker svg:nth-child(2)').classList.add('hidden');
         volume = 1;
         audio1.volume = 0.5;
-        audio2.volume = 0.7;
+        audio2.volume = 0.6;
         audio3.volume = 0.1;
+        audio4.volume = 0.3;
+    }
+}
+
+function scrollEvents() {
+    window.scrollTo(0, 15)
+    document.querySelector('.nav .section1').addEventListener('click', () => {scrollWin(0);});
+    document.querySelector('.nav .section2').addEventListener('click', () => {scrollWin(1);});
+    document.querySelector('.nav .section3').addEventListener('click', () => {scrollWin(2);});
+    document.querySelector('.nav .section4').addEventListener('click', () => {scrollWin(3);});
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 15 && stateAnimation === false) {
+            stateAnimation = true;
+            setTimeout(() => {
+                window.scrollTo(0, 15);
+                stateAnimation = false;
+            }, 250);
+            if (document.querySelector('.home').classList.contains('section-active')) {
+                scrollWin(1)
+                return;
+            }
+            if (document.querySelector('.projects').classList.contains('section-active')) {
+                scrollWin(2)
+                return;
+            }
+            if (document.querySelector('.experiments').classList.contains('section-active')) {
+                scrollWin(3)
+                return;
+            }
+            if (document.querySelector('.about-me').classList.contains('section-active')) {
+                window.scrollTo(0, 15);
+                return;
+            }
+        }
+        if (window.scrollY < 15 && stateAnimation === false) {
+            stateAnimation = true;
+            setTimeout(() => {
+                window.scrollTo(0, 15);
+                stateAnimation = false;
+            }, 250);
+            if (document.querySelector('.home').classList.contains('section-active')) {
+                window.scrollTo(0, 15);
+                return;
+            }
+            if (document.querySelector('.projects').classList.contains('section-active')) {
+                scrollWin(0)
+                return;
+            }
+            if (document.querySelector('.experiments').classList.contains('section-active')) {
+                scrollWin(1)
+                return;
+            }
+            if (document.querySelector('.about-me').classList.contains('section-active')) {
+                scrollWin(2)
+                return;
+            }
+        }
+    })
+}
+
+function scrollWin(e) {
+    window.scrollTo(0, 15);
+    audio4.currentTime = 0;
+    audio4.play();
+    function translateUp() {
+        document.querySelector('.home').classList.remove('section-active');
+        document.querySelector('.projects').classList.remove('section-active');
+        document.querySelector('.experiments').classList.remove('section-active');
+        document.querySelector('.about-me').classList.remove('section-active');
+        document.querySelector('.nav .section1').classList.remove('nav-active');
+        document.querySelector('.nav .section2').classList.remove('nav-active');
+        document.querySelector('.nav .section3').classList.remove('nav-active');
+        document.querySelector('.nav .section4').classList.remove('nav-active');
+    }
+    if (e === 0) {
+        translateUp();
+        document.querySelector('.home').classList.add('section-active');
+        document.querySelector('.nav .section1').classList.add('nav-active');
+    }
+    if (e === 1) {
+        translateUp();
+        document.querySelector('.projects').classList.add('section-active');
+        document.querySelector('.nav .section2').classList.add('nav-active');
+    }
+    if (e === 2) {
+        translateUp();
+        document.querySelector('.experiments').classList.add('section-active');
+        document.querySelector('.nav .section3').classList.add('nav-active');
+    }
+    if (e === 3) {
+        translateUp();
+        document.querySelector('.about-me').classList.add('section-active');
+        document.querySelector('.nav .section4').classList.add('nav-active');
     }
 }
