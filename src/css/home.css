@@ -44,7 +44,7 @@
     width: 100vw;
     bottom: 0;
     position: absolute;
-    overflow: hidden;
+    overflow-y: hidden;
     display: flex;
     align-items: center;
     justify-content: space-around;
