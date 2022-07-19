@@ -47,6 +47,22 @@ function initializingApp() {
 // ! Functions
 function app() {
     console.log('App Iniciada');
+    document.querySelector('.nav .section1').addEventListener('click', () => {
+        scrollWin(0);
+    });
+    document.querySelector('.nav .section2').addEventListener('click', () => {
+        scrollWin(1);
+    });
+    document.querySelector('.nav .section3').addEventListener('click', () => {
+        scrollWin(2);
+    });
+    document.querySelector('.nav .section4').addEventListener('click', () => {
+        scrollWin(3);
+    });
+    function scrollWin(e) {
+        const height = window.innerHeight
+        window.scrollTo(0, (height * e));
+    }
 }
 
 function startApp(e) {
