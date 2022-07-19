@@ -47,21 +47,41 @@ function initializingApp() {
 // ! Functions
 function app() {
     console.log('App Iniciada');
-    document.querySelector('.nav .section1').addEventListener('click', () => {
-        scrollWin(0);
-    });
-    document.querySelector('.nav .section2').addEventListener('click', () => {
-        scrollWin(1);
-    });
-    document.querySelector('.nav .section3').addEventListener('click', () => {
-        scrollWin(2);
-    });
-    document.querySelector('.nav .section4').addEventListener('click', () => {
-        scrollWin(3);
-    });
+    document.querySelector('.nav .section1').addEventListener('click', () => {scrollWin(0);});
+    document.querySelector('.nav .section2').addEventListener('click', () => {scrollWin(1);});
+    document.querySelector('.nav .section3').addEventListener('click', () => {scrollWin(2);});
+    document.querySelector('.nav .section4').addEventListener('click', () => {scrollWin(3);});
+
     function scrollWin(e) {
         const height = window.innerHeight
         window.scrollTo(0, (height * e));
+
+        // const home = document.querySelector('.home');
+        // const projects = document.querySelector('.projects');
+        // const experiments = document.querySelector('.experiments');
+        // function opacityOff() {
+        //     home.classList.remove('opacity-off')
+        //     projects.classList.remove('opacity-off')
+        //     experiments.classList.remove('opacity-off')
+        // }
+        // if (e === 0) {
+        //     opacityOff();
+        // }
+        // if (e === 1) {
+        //     opacityOff();
+        //     home.classList.add('opacity-off')
+        // }
+        // if (e === 2) {
+        //     opacityOff();
+        //     home.classList.add('opacity-off')
+        //     projects.classList.add('opacity-off')
+        // }
+        // if (e === 3) {
+        //     opacityOff();
+        //     home.classList.add('opacity-off')
+        //     projects.classList.add('opacity-off')
+        //     experiments.classList.add('opacity-off')
+        // }
     }
 }
 
