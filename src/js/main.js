@@ -149,12 +149,12 @@ function scrollEvents() {
     document.querySelector('.nav .section3').addEventListener('click', () => {scrollWin(2);});
     document.querySelector('.nav .section4').addEventListener('click', () => {scrollWin(3);});
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 15 && stateAnimation === false) {
+        if (window.scrollY > 20 && stateAnimation === false) {
             stateAnimation = true;
             setTimeout(() => {
                 window.scrollTo(0, 15);
                 stateAnimation = false;
-            }, 250);
+            }, 500);
             if (document.querySelector('.home').classList.contains('section-active')) {
                 scrollWin(1)
                 return;
@@ -172,12 +172,12 @@ function scrollEvents() {
                 return;
             }
         }
-        if (window.scrollY < 15 && stateAnimation === false) {
+        if (window.scrollY < 10 && stateAnimation === false) {
             stateAnimation = true;
             setTimeout(() => {
                 window.scrollTo(0, 15);
                 stateAnimation = false;
-            }, 250);
+            }, 500);
             if (document.querySelector('.home').classList.contains('section-active')) {
                 window.scrollTo(0, 15);
                 return;
