@@ -116,11 +116,26 @@
     margin: 0;
 }
 .experiments .background-text p:hover {
-    color: rgb(0, 153, 255);
-    text-shadow: 0 0 100px #0015ff;
+    color: rgb(62, 191, 255);
+    text-shadow: 0 0 100px #0073ff;
+}
+.experiments .title h1 {
+    margin: auto;
+    width: max-content;
+    font-size: 4em;
+    overflow: normal;
+    color: #43b4ff;
+    background: #00bede;
+    background: linear-gradient(90deg, #008dde 0%, #1100ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 10px rgba(0, 30, 255, 0.3);
+    position: relative;
+
 }
 
-
-.experiments h1 {
-    margin: 0;
+.experiments h2 {
+    margin: auto;
+    position: relative;
+    text-align: center;
 }
