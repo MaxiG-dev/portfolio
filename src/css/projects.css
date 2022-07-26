@@ -116,12 +116,8 @@
     cursor: default;
     margin: 0;
 }
-.projects .background-text p:hover {
-    color: rgb(255, 196, 0);
-    text-shadow: 0 0 100px #ff6600;
-}
 .projects .title {
-    padding: 30px;
+    padding: 30px 0px;
     position: absolute;
     width: 100vw;
 }
