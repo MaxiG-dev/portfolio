@@ -19,6 +19,7 @@
     height: 500px;
     display: flex;
     justify-content: center;
+    cursor: pointer;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -124,6 +125,11 @@
     height: 5em;
     overflow: hidden;
     margin: 0 2vw;
+    transform: translateX(16px);
+    -webkit-transform: translateX(16px);
+    -moz-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    -o-transform: translateX(16px);
 }
 
 .loader .container span p {
@@ -202,12 +208,18 @@
     animation-delay: 10s;
 }
 
+
 /* ? Media queries */
 
 @media only screen and (max-width: 520px) {
     .row1, .row2, .row3, .row4 {
         height: 35px;
         width: 158.34px;
+        transform: translateX(8px);
+        -webkit-transform: translateX(8px);
+        -moz-transform: translateX(8px);
+        -ms-transform: translateX(8px);
+        -o-transform: translateX(8px);
     }
     .row4 {
         width: 175.93px;
@@ -231,27 +243,6 @@
     .help {
         font-size: 0.9em!important;
         top: 80%!important;
-    }
-    /* ? Animations mobile */
-    @keyframes typing1 {
-        0% {
-            display: block;
-            width: 0px;
-        }
-        100% {
-            display: block;
-            width: 140.75px;
-        }
-    }
-    @keyframes typing2 {
-        0% {
-            display: block;
-            width: 0px;
-        }
-        100% {
-            display: block;
-            width: 158.34px;
-        }
     }
 }
 @media only screen and (max-height: 520px) {
@@ -282,33 +273,17 @@
         font-size: 0.9em!important;
         top: 80%!important;
     }
-    /* ? Animations mobile */
-    @keyframes typing1 {
-        0% {
-            display: block;
-            width: 0px;
-        }
-        100% {
-            display: block;
-            width: 140.75px;
-        }
-    }
-    @keyframes typing2 {
-        0% {
-            display: block;
-            width: 0px;
-        }
-        100% {
-            display: block;
-            width: 158.34px;
-        }
-    }
 }
 @media only screen and (max-width: 395px) {
     .row1, .row2, .row3, .row4 {
         height: 35px;
         width: 138.33px;
-    }
+        transform: translateX(6.405px);
+        -webkit-transform: translateX(6.405px);
+        -moz-transform: translateX(6.405px);
+        -ms-transform: translateX(6.405px);
+        -o-transform: translateX(6.405px);
+}
     .row4 {
         width: 150.77px;
     }
@@ -332,27 +307,6 @@
         font-size: 0.9em!important;
         top: 80%!important;
     }
-    /* ? Animations mobile */
-    @keyframes typing1 {
-        0% {
-            display: block;
-            width: 0px;
-        }
-        100% {
-            display: block;
-            width: 100.21px;
-        }
-    }
-    @keyframes typing2 {
-        0% {
-            display: block;
-            width: 0px;
-        }
-        100% {
-            display: block;
-            width: 130.21px;
-        }
-    }
 }
 /* ? Animations */
 @keyframes blinkCursor {
@@ -370,7 +324,7 @@
     }
     100% {
         display: block;
-        width: 281.5px;
+        width: 253.5px;
     }
 }
 @keyframes typing2 {
@@ -380,7 +334,7 @@
     }
     100% {
         display: block;
-        width: 316.9px;
+        width: 288.9px;
     }
 }
 @keyframes border1 {
@@ -449,3 +403,56 @@
     50% { opacity: 1
     }
 }
+
+
+
+
+    /* ? Animations mobile */
+@media only screen and (max-width: 520px) {
+    @keyframes typing1 {
+        0% {
+            display: block;
+            width: 0px;
+        }
+        100% {
+            display: block;
+            width: 128px;
+        }
+    }
+    @keyframes typing2 {
+        0% {
+            display: block;
+            width: 0px;
+        }
+        100% {
+            display: block;
+            width: 144px;
+        }
+    }
+}
+
+@media only screen and (max-width: 395px) {
+    @keyframes typing1 {
+        0% {
+            display: block;
+            width: 0px;
+        }
+        100% {
+            display: block;
+            width: 102px;
+        }
+    }
+    @keyframes typing2 {
+        0% {
+            display: block;
+            width: 0px;
+        }
+        100% {
+            display: block;
+            width: 115.2px;
+        }
+    }
+}
+
+
+
