@@ -48,7 +48,7 @@ function initializingApp() {
 // ! Functions
 function app() {
     scrollEvents();
-    audio4.volume = 0.3;
+    audio4.volume = 0.2;
 }
 
 function startApp(e) {
@@ -138,7 +138,7 @@ function volumeControl(e) {
         audio1.volume = 0.5;
         audio2.volume = 0.6;
         audio3.volume = 0.1;
-        audio4.volume = 0.3;
+        audio4.volume = 0.2;
     }
 }
 
