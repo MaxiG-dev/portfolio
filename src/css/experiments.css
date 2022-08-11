@@ -128,7 +128,7 @@
     overflow: normal;
     color: #43b4ff;
     background: #00bede;
-    background: linear-gradient(90deg, #008dde 0%, #1100ff 100%);
+    background: linear-gradient(90deg, #00a3de 0%, #00ff95 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0px 0px 10px rgba(0, 30, 255, 0.3);
