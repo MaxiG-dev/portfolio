@@ -27,6 +27,7 @@
     color: #43b4ff;
     background: #00bede;
     background: linear-gradient(90deg, #00bede 0%, #c100ff 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0px 0px 10px rgba(162, 0, 255, 0.3);
