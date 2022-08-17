@@ -132,7 +132,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0px 0px 10px rgba(0, 30, 255, 0.3);
+    text-shadow: 0px 0px 10px rgba(0, 247, 255, 0.3);
     position: relative;
 }
 .experiments .title h2 {

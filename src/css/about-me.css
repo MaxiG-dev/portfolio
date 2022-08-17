@@ -1,12 +1,158 @@
-.about-me {
+/* .about-me {
     width: 100vw;
     background-color: rgb(13, 49, 0);
     z-index: 997;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
 }
+ */
 
 
 
-.about-me h1 {
+.about-me {
+    position: fixed;
+    width: 100vw;
+    background-color: rgb(25, 25, 25);
+    background: linear-gradient(-220.55deg, rgb(25, 25, 25) 0%, #141414 100%);
+    z-index: 997;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+    top: 0;
+    overflow: hidden;
+}
+.about-me .background-text {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    padding: 10px 0px;
+    transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    -o-transform: rotate(-15deg);
+}
+.about-me .background-text div {
+    display: flex;
+    white-space: nowrap;
+    animation: text-animate 80s linear infinite;
+    -webkit-animation: text-animate 80s linear infinite;
+    animation-delay: -80s;
+}
+.about-me .background-text div:nth-child(2) {
+    animation: text-animate2 80s linear infinite;
+    -webkit-animation: text-animate2 80s linear infinite;
+    animation-delay: -40s;
+}
+@keyframes text-animate {
+    0% {
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+    }
+}
+@keyframes text-animate2 {
+    0% {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-200%);
+        -webkit-transform: translateX(-200%);
+        -moz-transform: translateX(-200%);
+        -ms-transform: translateX(-200%);
+        -o-transform: translateX(-200%);
+    }
+}
+.about-me .background-text:nth-child(even) div {
+    display: flex;
+    white-space: nowrap;
+    animation: text-animate3 80s linear infinite;
+    -webkit-animation: text-animate3 80s linear infinite;
+    animation-delay: -80s;
+}
+.about-me .background-text:nth-child(even) div:nth-child(2) {
+    animation: text-animate4 80s linear infinite;
+    -webkit-animation: text-animate4 80s linear infinite;
+    animation-delay: -40s;
+}
+@keyframes text-animate3 {
+    0% {
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+}
+    100% {
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+}
+}
+@keyframes text-animate4 {
+    0% {
+        transform: translateX(-200%);
+        -webkit-transform: translateX(-200%);
+        -moz-transform: translateX(-200%);
+        -ms-transform: translateX(-200%);
+        -o-transform: translateX(-200%);
+}
+    100% {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+}
+}
+.about-me .background-text p {
+    font-size: 12vh;
+    padding: 0px 5px;
+    color: rgba(0, 0, 0, 0.2);
+    user-select: none;
+    cursor: default;
     margin: 0;
+}
+.about-me .title {
+    padding: 30px 0px;
+    position: absolute;
+    width: 100vw;
+}
+.about-me .title h1 {
+    margin: auto;
+    width: max-content;
+    font-size: 4em;
+    overflow: normal;
+    color: #78e11c;
+    background: #78e11c;
+    background: linear-gradient(90deg, #e7ff0b 0%, #78e11c 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 10px rgba(21, 255, 0, 0.3);
+    position: relative;
+}
+.about-me .title h2 {
+    text-align: center;
+}
+.about-me .section1 {
+    width: 100vw;
+    height: 80vh;
+    background-color: #00bdde23;
+    display: flex;
+    top: 0;
+    justify-content: center;
+    align-items: center;
 }
