@@ -21,8 +21,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    animation: slide-in-left 3s cubic-bezier(0, 0.83, 0, 1) both;
-    -webkit-animation: slide-in-left 3s cubic-bezier(0, 0.83, 0, 1) both;
+    animation: slide-in-left 0.3s cubic-bezier(0, 0.83, 0, 1) both;
+    -webkit-animation: slide-in-left 0.3s cubic-bezier(0, 0.83, 0, 1) both;
+    z-index: 1001;
 }
 .home nav div {
     display: flex;
@@ -32,6 +33,7 @@
 
 .home nav div a {
     padding-left: 5px;
+    padding-right: 5px;
     width: auto;
     text-decoration: none;
     display: flex;
@@ -41,11 +43,13 @@
     -moz-transform: translateX(-70px);
     -ms-transform: translateX(-70px);
     -o-transform: translateX(-70px);
-    transition: transform 500ms ease-in-out;
-    -webkit-transition: transform 500ms ease-in-out;
-    -moz-transition: transform 500ms ease-in-out;
-    -ms-transition: transform 500ms ease-in-out;
-    -o-transition: transform 500ms ease-in-out;
+    transition: transform 500ms ease-in-out, background-color 500ms ease-in-out;
+    -webkit-transition: transform 500ms ease-in-out, background-color 500ms ease-in-out;
+    -moz-transition: transform 500ms ease-in-out, background-color 500ms ease-in-out;
+    -ms-transition: transform 500ms ease-in-out, background-color 500ms ease-in-out;
+    -o-transition: transform 500ms ease-in-out, background-color 500ms ease-in-out;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+    line-height: 0;
 }
 .home nav div a:hover {
     transform: translateX(var(--a-translate));
@@ -53,6 +57,8 @@
     -moz-transform: translateX(var(--a-translate));
     -ms-transform: translateX(var(--a-translate));
     -o-transform: translateX(var(--a-translate));
+    background-color: rgba(25, 25, 25, 0.8);
+
 }
 .home nav div img {
     width: 20px;
