@@ -65,7 +65,7 @@
     padding-left: 5px;
     right: 10px;
 }
-
+/* TODO: Crear selector de temas !! */
 .home .name {
     grid-area: 2 / 2 / 3 / 7;
     animation: slide-in-left 2s cubic-bezier(0, 0.83, 0, 1) both;
