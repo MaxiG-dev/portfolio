@@ -138,3 +138,19 @@
 .projects .title h2 {
     text-align: center;
 }
+
+@media only screen and (max-width: 810px) {
+    .projects .title h1 {
+        font-size: 55px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .projects .title h1 {
+        font-size: 47px;
+    }
+}
+@media only screen and (max-width: 525px) {
+    .projects .title h1 {
+        font-size: 27px;
+    }
+}

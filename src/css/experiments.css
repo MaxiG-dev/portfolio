@@ -181,6 +181,21 @@
         -o-transform: scale(1);
     }
 }
+@media only screen and (max-width: 810px) {
+    .experiments .title h1 {
+        font-size: 55px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .experiments .title h1 {
+        font-size: 47px;
+    }
+}
+@media only screen and (max-width: 525px) {
+    .experiments .title h1 {
+        font-size: 27px;
+    }
+}
 .swiper {
     margin-left: auto;
     margin-right: auto;

@@ -32,6 +32,7 @@
     -moz-transform: rotate(-15deg);
     -ms-transform: rotate(-15deg);
     -o-transform: rotate(-15deg);
+    z-index: -1;
 }
 .about-me .background-text div {
     display: flex;
@@ -135,7 +136,7 @@
 }
 
 .aboutMe__title {
-    padding: 30px 0px;
+    padding: 30px 0px 0px;
     position: relative;
     width: 100vw;
     grid-area: 1 / 1 / 2 / 6;
@@ -157,6 +158,36 @@
 }
 
 .aboutMe__title, .aboutMe__lore, .aboutMe__subtitle, .aboutMe__contact {
-    border: solid red 1px;
+    border: solid red 0px;
 }
 
+.aboutMe__links {
+    margin-top: 0em;
+}
+.aboutMe__links a {
+    margin-right: 1em;
+}
+.aboutMe__links img {
+    width: 2em;
+}
+.aboutMe__lore {
+    width: 90%;
+    margin: auto;
+    max-width: 650px;
+    line-height: 1.6em;
+}
+@media only screen and (max-width: 810px) {
+    .aboutMe__title h1 {
+        font-size: 55px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .aboutMe__title h1 {
+        font-size: 47px;
+    }
+}
+@media only screen and (max-width: 525px) {
+    .aboutMe__title h1 {
+        font-size: 27px;
+    }
+}
