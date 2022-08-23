@@ -1,5 +1,5 @@
 // ! Variables
-const container = document.querySelector('.container');
+const container = document.querySelector('.loader__container');
 const audio1 = document.querySelector('#audio1');
 const audio2 = document.querySelector('#audio2');
 const audio3 = document.querySelector('#audio3');
@@ -65,9 +65,9 @@ function startApp(e) {
         if (volume !== 0 ){
             audio1.volume = volume-0.5;
         }
-        container.classList.add('containerClick');
+        container.classList.add('loader__container-click');
         container.classList.add('startApp');
-        container.classList.remove('containerHover');
+        container.classList.remove('loader__container-hover');
         document.querySelector('.loader').classList.add('startAppBg');
         timeOutControl();
     }
@@ -76,9 +76,9 @@ function startApp(e) {
         document.querySelector('.loader') !== null &&
         stateApp && stateApp !== 'initialized'
     ) {
-        container.classList.add('containerHover');
-        container.classList.remove('containerClick');
-        container.classList.remove('containerOut');
+        container.classList.add('loader__container-hover');
+        container.classList.remove('loader__container-click');
+        container.classList.remove('loader__container-out');
         container.classList.remove('startApp');
         document.querySelector('.loader').classList.remove('startAppBg');
         if (audio1.volume >= 0.5) {
@@ -104,8 +104,8 @@ function timeOutControl() {
     if (stateApp && stateTime === false) {
         stateTime = true;
         timeControl = setTimeout(() => {
-            container.classList.remove('containerClick');
-            container.classList.add('containerOut');
+            container.classList.remove('loader__container-click');
+            container.classList.add('loader__container-out');
             stateApp = 'initialized';
             audio2.play();
             if (volume !== 0 ){
