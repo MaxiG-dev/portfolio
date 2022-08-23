@@ -13,7 +13,7 @@
     -ms-transition: background-color 2000ms;
     -o-transition: background-color 2000ms;
 }
-.container {
+.loader__container {
     position: relative;
     width: 500px;
     height: 500px;
@@ -27,7 +27,7 @@
     -o-border-radius: 50%;
 }
 
-.container::before {
+.loader__container::before {
     content: '';
     position: absolute;
     align-self: center;
@@ -49,7 +49,7 @@
     0px -20px 50px -5px #d000d4,
     0px -20px 80px -5px #d000d4;
 }
-.container span {
+.loader__span {
     position: absolute;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -77,28 +77,28 @@
     -o-border-radius: 50%;
 }
 
-.container {
+.loader__container {
     transition: transform 1000ms;
     -webkit-transition: transform 1000ms;
     -moz-transition: transform 1000ms;
     -ms-transition: transform 1000ms;
     -o-transition: transform 1000ms;
 }
-.containerHover:hover {
+.loader__container-hover:hover {
     transform: scale(105%);
     -webkit-transform: scale(105%);
     -moz-transform: scale(105%);
     -ms-transform: scale(105%);
     -o-transform: scale(105%);
 }
-.containerClick {
+.loader__container-click {
     transform: scale(150%);
     -webkit-transform: scale(150%);
     -moz-transform: scale(150%);
     -ms-transform: scale(150%);
     -o-transform: scale(150%);
 }
-.containerOut {
+.loader__container-out {
     transform: scale(3000%);
     -webkit-transform: scale(3000%);
     -moz-transform: scale(3000%);
@@ -116,10 +116,10 @@
     -webkit-animation: startApp 10000ms infinite;
 }
 
-.row1,
-.row2,
-.row3,
-.row4 {
+.loader_row1,
+.loader_row2,
+.loader_row3,
+.loader_row4 {
     width: fit-content;
     display: flex;
     height: 5em;
@@ -132,7 +132,7 @@
     -o-transform: translateX(16px);
 }
 
-.loader .container span p {
+.loader__span p {
     opacity: 0;
     font-size: 4em;
     transform: translateY(-1em);
@@ -144,7 +144,7 @@
     text-shadow: 0px 0px 5px #fff;
 }
 
-.loader .container h1 {
+.loader__container h1 {
     text-shadow: 0px 0px 3px #fff;
     font-size: 4em;
     margin: 0;
@@ -155,42 +155,42 @@
     white-space: nowrap;
 }
 
-.row1 h1 {
+.loader_row1 h1 {
     animation: typing1 1000ms steps(8) both;
     -webkit-animation: typing1 1000ms steps(8) both;
     animation-delay: 200ms;
 }
-.row1 p {
+.loader_row1 p {
     animation: blinkCursor 1000ms steps(3) 2;
     -webkit-animation: blinkCursor 1000ms steps(3) 2;
     animation-delay: 200ms;
 }
-.row2 h1 {
+.loader_row2 h1 {
     animation: typing1 1000ms steps(8) both;
     -webkit-animation: typing1 1000ms steps(8) both;
     animation-delay: 1600ms;
 }
-.row2 p {
+.loader_row2 p {
     animation: blinkCursor 1000ms steps(3) 2;
     -webkit-animation: blinkCursor 1000ms steps(3) 2;
     animation-delay: 1600ms;
 }
-.row3 h1 {
+.loader_row3 h1 {
     animation: typing1 1000ms steps(8) both;
     -webkit-animation: typing1 1000ms steps(8) both;
     animation-delay: 2900ms;
 }
-.row3 p {
+.loader_row3 p {
     animation: blinkCursor 1000ms steps(3) 2;
     -webkit-animation: blinkCursor 1000ms steps(3) 2;
     animation-delay: 2900ms;
 }
-.row4 h1 {
+.loader_row4 h1 {
     animation: typing2 1000ms steps(9) both;
     -webkit-animation: typing2 1000ms steps(9) both;
     animation-delay: 3400ms;
 }
-.row4 p {
+.loader_row4 p {
     animation: blinkCursor 1000ms steps(3) infinite;
     -webkit-animation: blinkCursor 1000ms steps(3) infinite;
     animation-delay: 3400ms;
@@ -212,7 +212,7 @@
 /* ? Media queries */
 
 @media only screen and (max-width: 520px) {
-    .row1, .row2, .row3, .row4 {
+    .loader_row1, .loader_row2, .loader_row3, .loader_row4 {
         height: 35px;
         width: 158.34px;
         transform: translateX(8px);
@@ -221,22 +221,22 @@
         -ms-transform: translateX(8px);
         -o-transform: translateX(8px);
     }
-    .row4 {
+    .loader_row4 {
         width: 175.93px;
     }
-    .container h1,
-    .container span p {
+    .loader__container h1,
+    .loader__span p {
         font-size: 2em!important;
     }
-    .container {
+    .loader__container {
         width: 280px;
         height: 280px;
     }
-    .container::after {
+    .loader__container::after {
         width: 280px;
         height: 280px;
     }
-    .container::before {
+    .loader__container::before {
         width: 280px;
         height: 280px;
     }
@@ -246,26 +246,26 @@
     }
 }
 @media only screen and (max-height: 520px) {
-    .row1, .row2, .row3, .row4 {
+    .loader_row1, .loader_row2, .loader_row3, .loader_row4 {
         height: 35px;
         width: 158.34px;
     }
-    .row4 {
+    .loader_row4 {
         width: 175.93px;
     }
-    .container h1,
-    .container span p {
+    .loader__container h1,
+    .loader__span p {
         font-size: 2em!important;
     }
-    .container {
+    .loader__container {
         width: 280px;
         height: 280px;
     }
-    .container::after {
+    .loader__container::after {
         width: 280px;
         height: 280px;
     }
-    .container::before {
+    .loader__container::before {
         width: 280px;
         height: 280px;
     }
@@ -275,7 +275,7 @@
     }
 }
 @media only screen and (max-width: 395px) {
-    .row1, .row2, .row3, .row4 {
+    .loader_row1, .loader_row2, .loader_row3, .loader_row4 {
         height: 35px;
         width: 138.33px;
         transform: translateX(6.405px);
@@ -284,22 +284,22 @@
         -ms-transform: translateX(6.405px);
         -o-transform: translateX(6.405px);
 }
-    .row4 {
+    .loader_row4 {
         width: 150.77px;
     }
-    .container h1,
-    .container span p {
+    .loader__container h1,
+    .loader__span p {
         font-size: 1.6em!important; 
     }
-    .container {
+    .loader__container {
         width: 280px;
         height: 280px;
     }
-    .container::after {
+    .loader__container::after {
         width: 280px;
         height: 280px;
     }
-    .container::before {
+    .loader__container::before {
         width: 280px;
         height: 280px;
     }
@@ -453,6 +453,3 @@
         }
     }
 }
-
-
-
