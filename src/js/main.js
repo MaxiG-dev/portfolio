@@ -27,7 +27,6 @@ function eventsListeners() {
     });
     document.querySelector('.speaker svg').addEventListener('click', () => {
         volumeControl('off');
-        alert(`Window ${window.innerHeight} Body ${document.body.clientHeight}`)
     });
     document.querySelector('.speaker svg:nth-child(2)').addEventListener('click', () => {
         volumeControl('on');
