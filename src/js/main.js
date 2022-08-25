@@ -32,6 +32,19 @@ function eventsListeners() {
         volumeControl('on');
     });
 }
+function skipLoader() {
+        document.querySelector('.loader').classList.add('loader__skip');
+        document.querySelector('.loader__skip_button').classList.add('hidden');
+        audio2.play();
+        if (volume !== 0 ){
+            audio2.volume = volume-0.4;
+        }
+        setTimeout(() => {
+            initializingApp();
+            audio3.play();
+            document.querySelector('.speaker').classList.add('speaker-on');
+        }, 1000);
+}
 function initializingApp() {
     document.querySelector('.loader').remove();
     document.querySelector('.nav').classList.add('nav-on');
@@ -105,6 +118,7 @@ function timeOutControl() {
         timeControl = setTimeout(() => {
             container.classList.remove('loader__container-click');
             container.classList.add('loader__container-out');
+            document.querySelector('.loader__skip_button').classList.add('hidden');
             stateApp = 'initialized';
             audio2.play();
             if (volume !== 0 ){

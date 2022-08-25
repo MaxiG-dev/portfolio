@@ -48,6 +48,18 @@ body {
 .hidden {
     display: none!important;
 }
+.button {
+    background: none;
+    border: #fff solid 1px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px;
+}
 .speaker {
     width: 30px;
     height: 30px;

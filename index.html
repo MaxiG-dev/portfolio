@@ -42,6 +42,12 @@
                 </span>
                 <p class="help">click and hover</p>
             </div>
+        <button class="button loader__skip_button" onclick="skipLoader()">
+            Skip animation
+            <!-- <svg style="width: 1.2em; margin-left: 0.3em" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062a1.125 1.125 0 01-1.683-.977V8.688z" />
+            </svg> -->
+        </button>
         <audio id="audio1" preload="auto" loop="true" hidden="hidden" src="./src/audio/Curiosity-64kb.mp3"></audio>
         </section>
         <audio id="audio2" preload="auto" hidden="hidden" src="./src/audio/Space-Deep-64kb.mp3"></audio>
@@ -1515,11 +1521,14 @@
             </div>
             <div class="aboutMe_container">
                 <div class="aboutMe__title">
-                    <h1>About me</h1><br>
-                    <h2>Let's work together!</h2>
+                    <h1>About me</h1>
                 </div>
                 <div class="aboutMe__lore">
-                    <p>Since I can remember I have been passionate about computing and programming, in 2017 I began to train as a Professional Technician and take different courses on computing, I was able to put my knowledge into practice and learn new ones in my first job. I am currently learning React.js and looking for a new position as a Frontend Developer.</p>
+                    <p>The field of computing and programming fascinates me, and I'm constantly curious!
+                    Right now, I'm learning Java and diving into the world of backend.
+                    As someone who has an innate desire to learn and grow in this fascinating field, I am highly motivated and eager to continue my career!<br>
+                    You can see more details here!</p>
+                    <button>Download CV</button>
                 </div>
                 <div class="aboutMe__subtitle">
                     <h2>My skills</h2>
@@ -1550,6 +1559,8 @@
                             <img class="aboutMe__skillImg" src="./src/img/icons/mysql.svg" alt="Icon MySQL">
                             <p class="aboutMe__skillText">MySQL</p>
                         </div>
+                    </div>
+                    <div class="aboutMe__wordpress">
                         <div class="aboutMe__skill">
                             <img class="aboutMe__skillImg" src="./src/img/icons/wordpress.svg" alt="Icon WordPress">
                             <p class="aboutMe__skillText">WordPress</p>

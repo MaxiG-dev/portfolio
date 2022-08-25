@@ -9,7 +9,6 @@
 /* TODO: Roadmap in about whit links to projects ussing my skills */
 
 .aboutMe_container {
-    border: solid red 1px;
     display: flex;
     flex-direction: column;
 }
@@ -159,9 +158,9 @@
     position: relative;
 }
 
-.aboutMe__title, .aboutMe__lore, .aboutMe__subtitle, .aboutMe__contact {
+/* .aboutMe__title, .aboutMe__lore, .aboutMe__subtitle, .aboutMe__contact {
     border: solid red 0px;
-}
+} */
 
 .aboutMe__links {
     margin-top: 0em;
@@ -186,7 +185,7 @@
     margin: auto;
     border: #78e11c solid 1px;
 }
-.aboutMe__programing, .aboutMe__desing {
+.aboutMe__programing, .aboutMe__wordpress, .aboutMe__desing {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -194,16 +193,28 @@
 }
 .aboutMe__skill {
     /* border: #a31ce1 solid 1px; */
-    width: 10em;
     min-width: 6.5em;
 }
 .aboutMe__skillImg {
     width: 3em;
 }
 
+@media screen and (max-width: 1210px) {
+
+}
+
 @media only screen and (max-width: 810px) {
     .aboutMe__title h1 {
         font-size: 55px;
+    }
+    .aboutMe__skills {
+        max-width: 400px;
+    }
+    .aboutMe__skillImg {
+        width: 2em;
+    }
+    .aboutMe__skillText {
+        font-size: 0.8em;
     }
 }
 @media only screen and (max-width: 600px) {
@@ -214,5 +225,11 @@
 @media only screen and (max-width: 525px) {
     .aboutMe__title h1 {
         font-size: 27px;
+    }
+    .aboutMe__subtitle {
+        font-size: 0.8em;
+    }
+    .aboutMe__lore {
+        font-size: 0.8em;
     }
 }
