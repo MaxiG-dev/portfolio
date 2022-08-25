@@ -152,6 +152,9 @@
 }
 /* Experiments images */
 .experiments .card:nth-child(1) .card-img {
+    background-image: url(../img/MaxiG.dev.webp);
+}
+.experiments .card:nth-child(2) .card-img {
     background-image: url(../img/Curso-JS.webp);
     filter:contrast(0.8);
     -webkit-filter:contrast(0.8);
