@@ -247,7 +247,3 @@ function scrollWin(e) {
         document.querySelector('.nav .section4').classList.add('nav-active');
     }
 }
-
-function downloadCV() {
-    alert('Cooming soon...');
-}

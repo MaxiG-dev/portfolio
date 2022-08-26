@@ -58,7 +58,6 @@
     -ms-transform: translateX(var(--a-translate));
     -o-transform: translateX(var(--a-translate));
     background-color: rgba(25, 25, 25, 0.8);
-
 }
 .home nav div img {
     width: 20px;
