@@ -129,10 +129,10 @@
     -webkit-animation: startApp 10000ms infinite;
 }
 
-.loader_row1,
-.loader_row2,
-.loader_row3,
-.loader_row4 {
+.loader__row1,
+.loader__row2,
+.loader__row3,
+.loader__row4 {
     width: fit-content;
     display: flex;
     height: 5em;
@@ -168,47 +168,47 @@
     white-space: nowrap;
 }
 
-.loader_row1 h1 {
+.loader__row1 h1 {
     animation: typing1 1000ms steps(8) both;
     -webkit-animation: typing1 1000ms steps(8) both;
     animation-delay: 200ms;
 }
-.loader_row1 p {
+.loader__row1 p {
     animation: blinkCursor 1000ms steps(3) 2;
     -webkit-animation: blinkCursor 1000ms steps(3) 2;
     animation-delay: 200ms;
 }
-.loader_row2 h1 {
+.loader__row2 h1 {
     animation: typing1 1000ms steps(8) both;
     -webkit-animation: typing1 1000ms steps(8) both;
     animation-delay: 1600ms;
 }
-.loader_row2 p {
+.loader__row2 p {
     animation: blinkCursor 1000ms steps(3) 2;
     -webkit-animation: blinkCursor 1000ms steps(3) 2;
     animation-delay: 1600ms;
 }
-.loader_row3 h1 {
+.loader__row3 h1 {
     animation: typing1 1000ms steps(8) both;
     -webkit-animation: typing1 1000ms steps(8) both;
     animation-delay: 2900ms;
 }
-.loader_row3 p {
+.loader__row3 p {
     animation: blinkCursor 1000ms steps(3) 2;
     -webkit-animation: blinkCursor 1000ms steps(3) 2;
     animation-delay: 2900ms;
 }
-.loader_row4 h1 {
+.loader__row4 h1 {
     animation: typing2 1000ms steps(9) both;
     -webkit-animation: typing2 1000ms steps(9) both;
     animation-delay: 3400ms;
 }
-.loader_row4 p {
+.loader__row4 p {
     animation: blinkCursor 1000ms steps(3) infinite;
     -webkit-animation: blinkCursor 1000ms steps(3) infinite;
     animation-delay: 3400ms;
 }
-.help {
+.loader__help {
     color: rgba(255, 255, 255, 1);
     position: relative;
     font-size: 1.1em;
@@ -226,30 +226,30 @@
 /* ? Media queries */
 
 @media only screen and (max-width: 520px) {
-    .row1, .row2, .row3, .row4 {
+    .loader__row1, .loader__row2, .loader__row3, .loader__row4 {
         height: 35px;
         width: 158.34px;
     }
-    .row4 {
+    .loader__row4 {
         width: 175.93px;
     }
-    .container h1,
-    .container span p {
+    .loader__container h1,
+    .loader__container span p {
         font-size: 2em!important;
     }
-    .container {
+    .loader__container {
         width: 280px;
         height: 280px;
     }
-    .container::after {
+    .loader__container::after {
         width: 280px;
         height: 280px;
     }
-    .container::before {
+    .loader__container::before {
         width: 280px;
         height: 280px;
     }
-    .help {
+    .loader__help {
         font-size: 0.9em!important;
         top: 80%!important;
     }
@@ -372,9 +372,6 @@
     }
 }
 
-
-
-
     /* ? Animations mobile */
 @media only screen and (max-width: 520px) {
     @keyframes typing1 {
@@ -398,7 +395,6 @@
         }
     }
 }
-
 @media only screen and (max-width: 395px) {
     @keyframes typing1 {
         0% {
@@ -420,7 +416,19 @@
             width: 115.2px;
         }
     }
+    .loader__container h1,
+    .loader__container span p {
+        font-size: 1.6em!important;
+    }
+    .loader__row1, .loader__row2, .loader__row3, .loader__row4 {
+        height: 35px;
+        width: 134px;
+    }
+    .loader__row4 {
+        width: 150px;
+    }
 }
+
 
 @media only screen and (max-height: 700px) {
     .loader__skip_button {
@@ -428,7 +436,6 @@
         padding: 5px;
     }
 }
-
 @media only screen and (max-height: 640px) {
     .loader__skip_button {
         margin-bottom: 1em;
