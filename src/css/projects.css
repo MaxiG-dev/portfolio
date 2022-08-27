@@ -19,6 +19,7 @@
     -moz-transform: rotate(-15deg);
     -ms-transform: rotate(-15deg);
     -o-transform: rotate(-15deg);
+    z-index: -1;
 }
 .projects .background-text div {
     display: flex;
@@ -118,7 +119,6 @@
 }
 .projects .title {
     padding: 30px 0px;
-    position: absolute;
     width: 100vw;
     grid-area: 1 / 1 / 2 / 2;
 }
@@ -134,6 +134,16 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0px 0px 10px rgba(255, 136, 0, 0.3);
+}
+.projects__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding-bottom: 10em;
+}
+.projects__cards {
+    padding-bottom: 3em;
 }
 .projects .title h2 {
     text-align: center;
