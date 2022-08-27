@@ -1,4 +1,3 @@
-
 /*Card */
 .card {
     aspect-ratio: 16/9;
@@ -90,7 +89,7 @@
     height: var(--size);
 }
 .card .icon-link {
-    fill: rgba(0,0,0,0);
+    fill: rgba(0, 0, 0, 0);
 }
 .card .icon-link path {
     color: #252525;
@@ -141,6 +140,6 @@
 }
 .experiments .card:nth-child(2) .card-img {
     background-image: url(../img/Curso-JS.webp);
-    filter:contrast(0.8);
-    -webkit-filter:contrast(0.8);
+    filter: contrast(0.8);
+    -webkit-filter: contrast(0.8);
 }

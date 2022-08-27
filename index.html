@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,29 +32,51 @@
     <meta property="twitter:image" content="https://maxig.dev/src/img/previews/MaxiGdev.jpg">
     <script src="./src/js/main.js" defer></script>
 </head>
+
 <body>
     <main class="main-container">
         <section class="loader">
             <div class="container loader__container-hover loader__container">
                 <span class="loader__span">
-                    <div class="loader__row1"><h1>Hello...</h1><p>|</p></div>
-                    <div class="loader__row2"><h1>I'm Maxi</h1><p>|</p></div>
-                    <div class="loader__row3"><h1>Frontend</h1><p>|</p></div>
-                    <div class="loader__row4"><h1>Developer</h1><p>|</p></div>
+                    <div class="loader__row1">
+                        <h1>Hello...</h1>
+                        <p>|</p>
+                    </div>
+                    <div class="loader__row2">
+                        <h1>I'm Maxi</h1>
+                        <p>|</p>
+                    </div>
+                    <div class="loader__row3">
+                        <h1>Frontend</h1>
+                        <p>|</p>
+                    </div>
+                    <div class="loader__row4">
+                        <h1>Developer</h1>
+                        <p>|</p>
+                    </div>
                 </span>
                 <p class="loader__help">click and hover</p>
             </div>
-        <button class="button loader__skip_button" onclick="skipLoader()">
-            Skip animation
-        </button>
-        <audio id="audio1" preload="auto" loop="true" hidden="hidden" src="./src/audio/Curiosity-64kb.mp3"></audio>
+            <button class="button loader__skip_button" onclick="skipLoader()">
+                Skip animation
+            </button>
+            <audio id="audio1" preload="auto" loop="true" hidden="hidden" src="./src/audio/Curiosity-64kb.mp3"></audio>
         </section>
         <audio id="audio2" preload="auto" hidden="hidden" src="./src/audio/Space-Deep-64kb.mp3"></audio>
-        <audio id="audio3" preload="auto" loop="true" hidden="hidden" src="./src/audio/Silence-In-Space-64kb.mp3"></audio>
+        <audio id="audio3" preload="auto" loop="true" hidden="hidden"
+            src="./src/audio/Silence-In-Space-64kb.mp3"></audio>
         <audio id="audio4" preload="auto" hidden="hidden" src="./src/audio/Transition-45kb.mp3"></audio>
         <span class="speaker">
-            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path></svg>
-            <svg class="hidden" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" ><path class="ytp-svg-fill" d="m 21.48,17.98 c 0,-1.77 -1.02,-3.29 -2.5,-4.03 v 2.21 l 2.45,2.45 c .03,-0.2 .05,-0.41 .05,-0.63 z m 2.5,0 c 0,.94 -0.2,1.82 -0.54,2.64 l 1.51,1.51 c .66,-1.24 1.03,-2.65 1.03,-4.15 0,-4.28 -2.99,-7.86 -7,-8.76 v 2.05 c 2.89,.86 5,3.54 5,6.71 z M 9.25,8.98 l -1.27,1.26 4.72,4.73 H 7.98 v 6 H 11.98 l 5,5 v -6.73 l 4.25,4.25 c -0.67,.52 -1.42,.93 -2.25,1.18 v 2.06 c 1.38,-0.31 2.63,-0.95 3.69,-1.81 l 2.04,2.05 1.27,-1.27 -9,-9 -7.72,-7.72 z m 7.72,.99 -2.09,2.08 2.09,2.09 V 9.98 z" id="ytp-id-57"></path></svg>
+            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                    d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z">
+                </path>
+            </svg>
+            <svg class="hidden" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+                <path class="ytp-svg-fill"
+                    d="m 21.48,17.98 c 0,-1.77 -1.02,-3.29 -2.5,-4.03 v 2.21 l 2.45,2.45 c .03,-0.2 .05,-0.41 .05,-0.63 z m 2.5,0 c 0,.94 -0.2,1.82 -0.54,2.64 l 1.51,1.51 c .66,-1.24 1.03,-2.65 1.03,-4.15 0,-4.28 -2.99,-7.86 -7,-8.76 v 2.05 c 2.89,.86 5,3.54 5,6.71 z M 9.25,8.98 l -1.27,1.26 4.72,4.73 H 7.98 v 6 H 11.98 l 5,5 v -6.73 l 4.25,4.25 c -0.67,.52 -1.42,.93 -2.25,1.18 v 2.06 c 1.38,-0.31 2.63,-0.95 3.69,-1.81 l 2.04,2.05 1.27,-1.27 -9,-9 -7.72,-7.72 z m 7.72,.99 -2.09,2.08 2.09,2.09 V 9.98 z"
+                    id="ytp-id-57"></path>
+            </svg>
         </span>
         <span class="nav">
             <div class="section1 nav-active"></div>
@@ -71,20 +94,24 @@
                         if (portfolio === 'complete') {<br>
                         startApp();<br>
                         return;<br>
-                    };<br>
-                    console.log('Scroll to see my work!');</p><br>
+                        };<br>
+                        console.log('Scroll to see my work!');</p><br>
                     <h3>Scroll to see my work!</h3>
                 </div>
                 <div class="home__links">
-                    <a class="header-button" href="https://www.linkedin.com/in/maxig-dev/" target="_blank" rel="noopener noreferrer"><img src="./src/img/icons/linkedin.svg" alt="Linkedin MaxiG.dev"></a>
-                    <a class="header-button" href="https://github.com/MaxiG-dev" target="_blank" rel="noopener noreferrer"><img src="./src/img/icons/github.svg" alt="Github MaxiG.dev"></a>
-                    <a class="header-button" href="mailto:maxig.dev@gmail.com" target="_blank" rel="noopener noreferrer"><img src="./src/img/icons/gmail.svg" alt="Gmail MaxiG.dev"></a>
+                    <a class="header-button" href="https://www.linkedin.com/in/maxig-dev/" target="_blank"
+                        rel="noopener noreferrer"><img src="./src/img/icons/linkedin.svg" alt="Linkedin MaxiG.dev"></a>
+                    <a class="header-button" href="https://github.com/MaxiG-dev" target="_blank"
+                        rel="noopener noreferrer"><img src="./src/img/icons/github.svg" alt="Github MaxiG.dev"></a>
+                    <a class="header-button" href="mailto:maxig.dev@gmail.com" target="_blank"
+                        rel="noopener noreferrer"><img src="./src/img/icons/gmail.svg" alt="Gmail MaxiG.dev"></a>
                 </div>
             </div>
             <span class="notebook">
                 <?xml version="1.0" encoding="utf-8"?>
-                <svg version="1.1" id="notebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                    y="0px" viewBox="0 0 600 450" style="enable-background:new 0 0 600 450;" xml:space="preserve">
+                <svg version="1.1" id="notebook" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 450"
+                    style="enable-background:new 0 0 600 450;" xml:space="preserve">
                     <radialGradient id="SVGID_1_" cx="171.4004" cy="135.2401" r="733.4801"
                         gradientTransform="matrix(1.0858 0 0 1.088 -119.9181 -249.2813)" gradientUnits="userSpaceOnUse">
                         <stop offset="3.968250e-03" style="stop-color:#4C02F1" />
@@ -103,10 +130,12 @@
                             d="M263.6,409.7V400h3c1.7,0,2.5,0.9,2.5,2.8c0,0.5-0.1,0.9-0.2,1.3c-0.1,0.4-0.3,0.6-0.6,0.8
                         c-0.2,0.2-0.5,0.3-0.8,0.4c-0.3,0.1-0.7,0.1-1.1,0.1h-0.9v4.2H263.6z M265.6,404.1h0.6c0.4,0,0.7-0.1,0.9-0.3
                         c0.1-0.2,0.2-0.5,0.2-1c0-0.3,0-0.5,0-0.6c0-0.1-0.1-0.3-0.1-0.4c-0.1-0.1-0.2-0.2-0.3-0.3c-0.2-0.1-0.3-0.1-0.6-0.1h-0.6V404.1z" />
-                        <path class="st2" d="M270.2,409.7V400h2.5c0.5,0,1,0,1.3,0.1c0.4,0.1,0.7,0.2,1,0.4c0.3,0.2,0.5,0.5,0.6,0.8
+                        <path class="st2"
+                            d="M270.2,409.7V400h2.5c0.5,0,1,0,1.3,0.1c0.4,0.1,0.7,0.2,1,0.4c0.3,0.2,0.5,0.5,0.6,0.8
                         c0.1,0.3,0.2,0.8,0.2,1.3c0,0.6-0.1,1.1-0.3,1.5c-0.2,0.4-0.5,0.7-0.9,0.9l1.3,4.7h-2l-1.1-4.4h-0.7v4.4H270.2z M272.1,404.2h0.5
                         c0.5,0,0.8-0.1,1-0.3c0.2-0.2,0.3-0.6,0.3-1.1c0-0.5-0.1-0.8-0.3-1.1c-0.2-0.2-0.5-0.3-0.9-0.3h-0.6V404.2z" />
-                        <path class="st2" d="M279.8,409.9c-0.5,0-1-0.1-1.3-0.2c-0.4-0.1-0.7-0.4-0.9-0.6s-0.4-0.6-0.5-1c-0.1-0.4-0.1-0.8-0.1-1.4v-3.6
+                        <path class="st2"
+                            d="M279.8,409.9c-0.5,0-1-0.1-1.3-0.2c-0.4-0.1-0.7-0.4-0.9-0.6s-0.4-0.6-0.5-1c-0.1-0.4-0.1-0.8-0.1-1.4v-3.6
                         c0-0.5,0-1,0.1-1.4c0.1-0.4,0.3-0.7,0.5-1c0.2-0.3,0.5-0.5,0.9-0.6c0.4-0.1,0.8-0.2,1.3-0.2c1,0,1.8,0.3,2.2,0.8
                         c0.4,0.5,0.7,1.3,0.7,2.4v3.6c0,1-0.2,1.8-0.7,2.4C281.6,409.6,280.9,409.9,279.8,409.9z M279.4,408.4c0.1,0,0.2,0.1,0.4,0.1
                         c0.1,0,0.3,0,0.4-0.1c0.1,0,0.2-0.1,0.3-0.2c0.1-0.1,0.1-0.2,0.1-0.3c0-0.1,0.1-0.2,0.1-0.3c0-0.1,0-0.2,0-0.4v-4.5
@@ -120,7 +149,8 @@
                         c-0.1,0.1-0.2,0.1-0.3,0.2c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1-0.1,0.3-0.1,0.4c0,0.1,0,0.3,0,0.4v4.2c0,0.5,0.1,0.8,0.2,1.1
                         s0.4,0.4,0.7,0.4c0.4,0,0.6-0.1,0.7-0.4c0.1-0.3,0.2-0.6,0.2-1.1v-1h-1v-1.2h2.7v5h-1.3l-0.1-0.9
                         C287.8,409.5,287.3,409.9,286.5,409.9z" />
-                        <path class="st2" d="M290.9,409.7V400h2.5c0.5,0,1,0,1.3,0.1c0.4,0.1,0.7,0.2,1,0.4c0.3,0.2,0.5,0.5,0.6,0.8
+                        <path class="st2"
+                            d="M290.9,409.7V400h2.5c0.5,0,1,0,1.3,0.1c0.4,0.1,0.7,0.2,1,0.4c0.3,0.2,0.5,0.5,0.6,0.8
                         c0.1,0.3,0.2,0.8,0.2,1.3c0,0.6-0.1,1.1-0.3,1.5c-0.2,0.4-0.5,0.7-0.9,0.9l1.3,4.7h-2l-1.1-4.4h-0.7v4.4H290.9z M292.8,404.2h0.5
                         c0.5,0,0.8-0.1,1-0.3c0.2-0.2,0.3-0.6,0.3-1.1c0-0.5-0.1-0.8-0.3-1.1c-0.2-0.2-0.5-0.3-0.9-0.3h-0.6V404.2z" />
                         <path class="st2" d="M297.3,409.7l1.9-9.7h2.2l1.9,9.7h-1.8l-0.4-2.2h-1.5l-0.4,2.2H297.3z M299.7,406.4h1.2l-0.6-3.9L299.7,406.4z
@@ -139,18 +169,19 @@
                         c0.1,0.2,0.4,0.4,0.7,0.4c0.4,0,0.6-0.1,0.7-0.4c0.1-0.3,0.2-0.6,0.2-1.1v-1h-1v-1.2h2.7v5h-1.3l-0.1-0.9
                         C334.8,409.5,334.2,409.9,333.5,409.9z" />
                     </g>
-                    <linearGradient id="line3_00000138556704210481533100000016396737254135831699_" gradientUnits="userSpaceOnUse"
-                        x1="481.059" y1="306.9162" x2="513.6703" y2="306.9162">
+                    <linearGradient id="line3_00000138556704210481533100000016396737254135831699_"
+                        gradientUnits="userSpaceOnUse" x1="481.059" y1="306.9162" x2="513.6703" y2="306.9162">
                         <stop offset="5.586592e-03" style="stop-color:#00B9D4" />
                         <stop offset="1" style="stop-color:#8400FF" />
                     </linearGradient>
-                    <path id="line3" style="fill:url(#line3_00000138556704210481533100000016396737254135831699_);" d="M497.4,316.5
+                    <path id="line3" style="fill:url(#line3_00000138556704210481533100000016396737254135831699_);"
+                        d="M497.4,316.5
                     c-1.2,0-2.4-0.3-3.5-0.9l-11.7-6.8c-0.7-0.4-1.1-1.1-1.1-1.9c0-0.8,0.4-1.5,1.1-1.9l11.7-6.8c2.1-1.2,4.8-1.2,7,0l11.7,6.8
                     c0.7,0.4,1.1,1.1,1.1,1.9c0,0.8-0.4,1.5-1.1,1.9l-11.7,6.8C499.8,316.2,498.6,316.5,497.4,316.5z M497.4,299.2
                     c-0.9,0-1.8,0.2-2.6,0.7l-11.7,6.8c-0.1,0.1-0.2,0.2-0.2,0.3c0,0.1,0,0.2,0.2,0.3l11.7,6.8c0,0,0,0,0,0c1.6,0.9,3.5,0.9,5.1,0
                     l11.7-6.8c0.1-0.1,0.2-0.2,0.2-0.3c0-0.1,0-0.2-0.2-0.3l-11.7-6.8C499.1,299.4,498.2,299.2,497.4,299.2z" />
-                    <linearGradient id="line2_00000011026413463482529510000014648613563423262336_" gradientUnits="userSpaceOnUse"
-                        x1="436.4076" y1="262.223" x2="491.186" y2="262.223">
+                    <linearGradient id="line2_00000011026413463482529510000014648613563423262336_"
+                        gradientUnits="userSpaceOnUse" x1="436.4076" y1="262.223" x2="491.186" y2="262.223">
                         <stop offset="0" style="stop-color:#00B9D4" />
                         <stop offset="1" style="stop-color:#8400FF" />
                     </linearGradient>
@@ -161,18 +192,20 @@
                     c0,0.2,0.1,0.7,0.6,1L459.1,274.9z" />
                     <path id="notebookShadow" class="st5" d="M307.1,347.3l-144.4-83.4c-2.1-1.2-1.8-3.3,0.6-4.7l92.7-53.5c2.4-1.4,6.1-1.6,8.2-0.3
                     l144.4,83.4c2.1,1.2,1.8,3.3-0.6,4.7l-92.7,53.5C312.9,348.3,309.2,348.5,307.1,347.3z" />
-                    <linearGradient id="notebookLine_00000168829739759044471420000018143107695138858169_" gradientUnits="userSpaceOnUse"
-                        x1="138.9594" y1="277.0616" x2="431.3178" y2="277.0616">
+                    <linearGradient id="notebookLine_00000168829739759044471420000018143107695138858169_"
+                        gradientUnits="userSpaceOnUse" x1="138.9594" y1="277.0616" x2="431.3178" y2="277.0616">
                         <stop offset="0" style="stop-color:#00B9D4" />
                         <stop offset="1" style="stop-color:#8400FF" />
                     </linearGradient>
-                    <path id="notebookLine" style="fill:url(#notebookLine_00000168829739759044471420000018143107695138858169_);" d="M310.4,362.3
+                    <path id="notebookLine"
+                        style="fill:url(#notebookLine_00000168829739759044471420000018143107695138858169_);"
+                        d="M310.4,362.3
                     c-1.7,0-3.3-0.4-4.5-1.1h0L141,266.1c-1.3-0.8-2.1-1.9-2.1-3.2c0-1.4,1-2.9,2.8-3.9l112.4-65.8c3.1-1.8,7.6-2,10.3-0.4L429.2,288
                     c1.3,0.8,2.1,1.9,2.1,3.2c0,1.4-1,2.9-2.8,3.9l-112.4,65.8C314.5,361.8,312.4,362.3,310.4,362.3z M259.9,193.7
                     c-1.7,0-3.5,0.4-4.9,1.2l-112.4,65.8c-1.2,0.7-1.8,1.5-1.8,2.3c0,0.7,0.6,1.2,1.2,1.5l164.8,95.2c0,0,0,0,0,0c2.1,1.2,6,1,8.4-0.4
                     l112.4-65.8c1.2-0.7,1.8-1.5,1.8-2.3c0-0.7-0.6-1.2-1.2-1.5l-164.8-95.2C262.5,193.9,261.2,193.7,259.9,193.7z" />
-                    <linearGradient id="line1_00000170964907840455701060000005400850512381897660_" gradientUnits="userSpaceOnUse"
-                        x1="75.185" y1="280.5753" x2="129.9633" y2="280.5753">
+                    <linearGradient id="line1_00000170964907840455701060000005400850512381897660_"
+                        gradientUnits="userSpaceOnUse" x1="75.185" y1="280.5753" x2="129.9633" y2="280.5753">
                         <stop offset="5.586592e-03" style="stop-color:#00B9D4" />
                         <stop offset="1" style="stop-color:#8400FF" />
                     </linearGradient>
@@ -182,19 +215,20 @@
                     c-1.6,0-3.3,0.4-4.7,1.3l-20.2,11.7c-0.5,0.3-0.6,0.8-0.6,1c0,0.2,0.1,0.7,0.6,1l20.2,11.7l0,0c2.9,1.7,6.5,1.7,9.5,0l20.2-11.7
                     c0.5-0.3,0.6-0.8,0.6-1c0-0.2-0.1-0.7-0.6-1l-20.2-11.7C105.8,267,104.2,266.6,102.6,266.6z" />
                     <g id="notebook">
-                        <radialGradient id="SVGID_00000044882851090237915050000004179843034265338554_" cx="300.4459" cy="60.6072"
-                            r="223.2961" gradientUnits="userSpaceOnUse">
+                        <radialGradient id="SVGID_00000044882851090237915050000004179843034265338554_" cx="300.4459"
+                            cy="60.6072" r="223.2961" gradientUnits="userSpaceOnUse">
                             <stop offset="0" style="stop-color:#00B2E9" />
                             <stop offset="0.4742" style="stop-color:#3F8CFF" />
                             <stop offset="0.6075" style="stop-color:#745EFF" />
                             <stop offset="0.7085" style="stop-color:#983FFF" />
                             <stop offset="0.891" style="stop-color:#380094" />
                         </radialGradient>
-                        <path style="fill:url(#SVGID_00000044882851090237915050000004179843034265338554_);" d="M447,148.9L303.1,65.8
+                        <path style="fill:url(#SVGID_00000044882851090237915050000004179843034265338554_);"
+                            d="M447,148.9L303.1,65.8
                         c-1-0.6-2-0.7-2.9-0.4v0l0,0c0,0,0,0,0,0l-2.7,0.9l0.9,0.2c-0.4,0.4-0.7,1-0.9,1.6L265,173.8c-0.8,2.6,0.4,5.8,2.6,7.1L411.5,264
                         c0.3,0.2,0.7,0.3,1.1,0.4l-0.4,0.8l2.5-0.9l0,0c1-0.4,1.9-1.3,2.3-2.7L449.6,156C450.4,153.4,449.3,150.2,447,148.9z" />
-                        <radialGradient id="SVGID_00000070114787388329808390000007939025131101928893_" cx="163.8732" cy="239.9302"
-                            r="244.1723" gradientUnits="userSpaceOnUse">
+                        <radialGradient id="SVGID_00000070114787388329808390000007939025131101928893_" cx="163.8732"
+                            cy="239.9302" r="244.1723" gradientUnits="userSpaceOnUse">
                             <stop offset="0" style="stop-color:#15A6FF" />
                             <stop offset="0.4742" style="stop-color:#3F46FF" />
                             <stop offset="0.5595" style="stop-color:#4F2BFD" />
@@ -204,8 +238,8 @@
                         <path style="fill:url(#SVGID_00000070114787388329808390000007939025131101928893_);" d="M406.4,267.9L406.4,267.9l-142-82
                         c-2.1-1.2-5.7-1.1-8.2,0.3l-91.8,53l-3.1-1.2l0.9,4.3l0,0c0.1,0.6,0.6,1.3,1.4,1.7L307,326.9c2.1,1.2,5.7,1.1,8.2-0.3l92-53.1
                         c1.1-0.7,1.8-1.5,2-2.3l0,0l0.9-4.2L406.4,267.9z" />
-                        <radialGradient id="SVGID_00000088825268748818856740000014082826266435772288_" cx="186.3305" cy="190.9207"
-                            r="218.96" gradientUnits="userSpaceOnUse">
+                        <radialGradient id="SVGID_00000088825268748818856740000014082826266435772288_" cx="186.3305"
+                            cy="190.9207" r="218.96" gradientUnits="userSpaceOnUse">
                             <stop offset="0" style="stop-color:#15B3FF" />
                             <stop offset="0.4742" style="stop-color:#5586FF" />
                             <stop offset="0.4749" style="stop-color:#5586FF" />
@@ -519,8 +553,8 @@
                             <path class="st13" d="M329.4,273.7l5.4,3.1c0.3,0.2,0.3,0.5-0.1,0.7l-2.4,1.4c-0.4,0.2-0.9,0.2-1.3,0.1l-5.4-3.1
                             c-0.3-0.2-0.3-0.5,0.1-0.7l2.4-1.4C328.5,273.5,329.1,273.5,329.4,273.7z" />
                         </g>
-                        <radialGradient id="SVGID_00000129188475007105970920000005352549385667712684_" cx="240.8779" cy="107.1847"
-                            r="223.3409" gradientUnits="userSpaceOnUse">
+                        <radialGradient id="SVGID_00000129188475007105970920000005352549385667712684_" cx="240.8779"
+                            cy="107.1847" r="223.3409" gradientUnits="userSpaceOnUse">
                             <stop offset="0" style="stop-color:#15DBFF" />
                             <stop offset="0.4742" style="stop-color:#007ED4" />
                             <stop offset="0.4904" style="stop-color:#097AD7" />
@@ -531,8 +565,8 @@
                         <path style="fill:url(#SVGID_00000129188475007105970920000005352549385667712684_);" d="M409.1,264.9l-143.9-83.1
                         c-2.3-1.3-3.4-4.5-2.6-7.1l32.5-105.6c0.8-2.6,3.3-3.7,5.6-2.4l143.9,83.1c2.3,1.3,3.4,4.5,2.6,7.1l-32.5,105.6
                         C413.8,265.1,411.3,266.2,409.1,264.9z" />
-                        <linearGradient id="SVGID_00000121990020817178599760000004180233795747350184_" gradientUnits="userSpaceOnUse"
-                            x1="265.4256" y1="165.8121" x2="444.392" y2="165.8121">
+                        <linearGradient id="SVGID_00000121990020817178599760000004180233795747350184_"
+                            gradientUnits="userSpaceOnUse" x1="265.4256" y1="165.8121" x2="444.392" y2="165.8121">
                             <stop offset="0" style="stop-color:#3945BB" />
                             <stop offset="1" style="stop-color:#2100FF" />
                         </linearGradient>
@@ -546,8 +580,8 @@
                         <path class="st17" d="M400.2,230.3l-94.5-54.5c-1.5-0.9-2.3-2.9-1.7-4.7l21.4-69.4c0.5-1.7,2.2-2.4,3.6-1.6l94.5,54.5
                         c1.5,0.9,2.3,2.9,1.7,4.7l-21.4,69.4C403.4,230.5,401.7,231.2,400.2,230.3z" />
                         <g>
-                            <radialGradient id="SVGID_00000005982845720190235330000011612237250415882148_" cx="159.3462" cy="59.4914"
-                                r="347.8475" gradientUnits="userSpaceOnUse">
+                            <radialGradient id="SVGID_00000005982845720190235330000011612237250415882148_" cx="159.3462"
+                                cy="59.4914" r="347.8475" gradientUnits="userSpaceOnUse">
                                 <stop offset="0" style="stop-color:#3FE6FF" />
                                 <stop offset="0.4742" style="stop-color:#2A91FF" />
                                 <stop offset="0.4957" style="stop-color:#2F86FF" />
@@ -563,9 +597,11 @@
                             <path class="st13" d="M387.5,232L293,177.4c-1.5-0.9-2.3-2.9-1.7-4.7l21.4-69.4c0.5-1.7,2.2-2.4,3.6-1.6l94.5,54.5
                             c1.5,0.9,2.3,2.9,1.7,4.7l-21.4,69.4C390.6,232.1,389,232.8,387.5,232z" />
                         </g>
-                        <path class="st11" d="M410.7,156.4l-94.5-54.5c-0.9-0.5-1.9-0.5-2.7,0.1c0.4,0,0.9,0.1,1.4,0.3l94.5,54.5c1.5,0.9,2.3,2.9,1.7,4.7
+                        <path class="st11"
+                            d="M410.7,156.4l-94.5-54.5c-0.9-0.5-1.9-0.5-2.7,0.1c0.4,0,0.9,0.1,1.4,0.3l94.5,54.5c1.5,0.9,2.3,2.9,1.7,4.7
                         l-21.4,69.4c-0.2,0.6-0.5,1.1-1,1.5c1,0,1.9-0.7,2.3-1.9l21.4-69.4C413,159.3,412.2,157.2,410.7,156.4z" />
-                        <path class="st16" d="M268.3,288.6c-1.3,0-2.5-0.3-3.5-0.8v0L227,265.9c-1-0.6-1.6-1.4-1.6-2.3c0-1.1,0.8-2.1,2.1-2.9l19.5-11.2
+                        <path class="st16"
+                            d="M268.3,288.6c-1.3,0-2.5-0.3-3.5-0.8v0L227,265.9c-1-0.6-1.6-1.4-1.6-2.3c0-1.1,0.8-2.1,2.1-2.9l19.5-11.2
                         c2.4-1.4,5.9-1.5,8-0.3l37.8,21.8c1,0.6,1.6,1.4,1.6,2.3c0,1.1-0.8,2.1-2.1,2.9l-19.5,11.2C271.5,288.2,269.9,288.6,268.3,288.6z
                             M251.5,249.4c-1.4,0-2.8,0.3-3.9,1l-19.5,11.2c-1,0.6-1.5,1.3-1.5,1.9c0,0.7,0.5,1.1,1,1.4l37.8,21.9c1.7,1,4.9,0.9,6.9-0.3
                         l19.5-11.2c1-0.6,1.5-1.3,1.5-1.9c0-0.7-0.5-1.1-1-1.4l-37.8-21.8C253.6,249.7,252.6,249.4,251.5,249.4z" />
@@ -628,20 +664,21 @@
                             l0,0C402.9,162.4,402.5,162.6,402.1,162.4z" />
                         </g>
                     </g>
-                    <linearGradient id="cupLine_00000069399182920581893240000014428830659893626246_" gradientUnits="userSpaceOnUse"
-                        x1="143.4096" y1="190.2935" x2="220.185" y2="190.2935">
+                    <linearGradient id="cupLine_00000069399182920581893240000014428830659893626246_"
+                        gradientUnits="userSpaceOnUse" x1="143.4096" y1="190.2935" x2="220.185" y2="190.2935">
                         <stop offset="0" style="stop-color:#00B9D4" />
                         <stop offset="1" style="stop-color:#8400FF" />
                     </linearGradient>
-                    <path id="cupLine" style="fill:url(#cupLine_00000069399182920581893240000014428830659893626246_);" d="M181.8,212.3
+                    <path id="cupLine" style="fill:url(#cupLine_00000069399182920581893240000014428830659893626246_);"
+                        d="M181.8,212.3
                     c-2.7,0-5.4-0.7-7.8-2.1l0,0l-28.6-16.5c-1.2-0.7-2-2-2-3.4c0-1.4,0.7-2.7,2-3.4l28.6-16.5c4.8-2.8,10.8-2.8,15.6,0l28.6,16.5
                     c1.2,0.7,2,2,2,3.4c0,1.4-0.7,2.7-2,3.4l-28.6,16.5C187.2,211.6,184.5,212.3,181.8,212.3z M174.9,208.6c4.2,2.5,9.5,2.5,13.8,0
                     l28.6-16.5c0.7-0.4,1-1.1,1-1.8s-0.4-1.4-1-1.8L188.7,172c-4.2-2.5-9.5-2.5-13.8,0l-28.6,16.5c-0.7,0.4-1,1.1-1,1.8
                     c0,0.8,0.4,1.4,1,1.8L174.9,208.6z" />
                     <ellipse id="cupShadow" class="st5" cx="181.7" cy="190.7" rx="19.6" ry="11.3" />
                     <g id="cup">
-                        <radialGradient id="SVGID_00000088833821847109981490000007889180999084384173_" cx="150.2162" cy="127.668"
-                            r="165.349" gradientUnits="userSpaceOnUse">
+                        <radialGradient id="SVGID_00000088833821847109981490000007889180999084384173_" cx="150.2162"
+                            cy="127.668" r="165.349" gradientUnits="userSpaceOnUse">
                             <stop offset="0" style="stop-color:#E39A65" />
                             <stop offset="0.1528" style="stop-color:#A92FFB" />
                             <stop offset="0.4087" style="stop-color:#3919BB" />
@@ -654,8 +691,8 @@
                         c-0.1,1.9-0.7,3.8-2,5.3c-1.8,2.1-5.3,4.6-12,6.1c4.9-0.3,9.7-1.6,13.5-3.8c4.4-2.6,6.7-5.9,6.7-9.3l4.2-48.6l0,0L210.8,109.9z" />
                         <ellipse class="st16" cx="182.8" cy="109.9" rx="28" ry="16.1" />
                         <ellipse class="st16" cx="182.8" cy="104.2" rx="24.1" ry="13.9" />
-                        <linearGradient id="SVGID_00000046333911210525436300000009192290913427344018_" gradientUnits="userSpaceOnUse"
-                            x1="153.1426" y1="107.1846" x2="212.452" y2="107.1846">
+                        <linearGradient id="SVGID_00000046333911210525436300000009192290913427344018_"
+                            gradientUnits="userSpaceOnUse" x1="153.1426" y1="107.1846" x2="212.452" y2="107.1846">
                             <stop offset="0" style="stop-color:#E39A65" />
                             <stop offset="0.252" style="stop-color:#A92FFB" />
                             <stop offset="0.5556" style="stop-color:#3919BB" />
@@ -664,24 +701,24 @@
                             d="M212.4,109.1L212.4,109.1L212.4,109.1
                         c0-0.1,0-0.1,0-0.1l-0.5-5.4l0,0.1c-0.2-4.1-3.1-8.2-8.5-11.3c-11.4-6.6-29.8-6.6-41.1,0c-5.6,3.2-8.4,7.4-8.5,11.6l0,0l-0.5,4.8
                         c0,0.1,0,0.3,0,0.4l0,0.1l0,0c-0.3,4.6,2.6,9.3,8.7,12.8c11.6,6.7,30.4,6.7,41.9,0C209.9,118.4,212.8,113.7,212.4,109.1z" />
-                        <linearGradient id="SVGID_00000146478122553625794400000003090748045778557841_" gradientUnits="userSpaceOnUse"
-                            x1="158.7038" y1="104.171" x2="206.8881" y2="104.171">
+                        <linearGradient id="SVGID_00000146478122553625794400000003090748045778557841_"
+                            gradientUnits="userSpaceOnUse" x1="158.7038" y1="104.171" x2="206.8881" y2="104.171">
                             <stop offset="0" style="stop-color:#4F1FEC" />
                             <stop offset="1" style="stop-color:#A92FFB" />
                         </linearGradient>
-                        <ellipse style="fill:url(#SVGID_00000146478122553625794400000003090748045778557841_);" cx="182.8" cy="104.2"
-                            rx="24.1" ry="13.9" />
-                        <linearGradient id="SVGID_00000081629471340877122610000000893010847105872300_" gradientUnits="userSpaceOnUse"
-                            x1="157.5606" y1="104.171" x2="205.7449" y2="104.171">
+                        <ellipse style="fill:url(#SVGID_00000146478122553625794400000003090748045778557841_);"
+                            cx="182.8" cy="104.2" rx="24.1" ry="13.9" />
+                        <linearGradient id="SVGID_00000081629471340877122610000000893010847105872300_"
+                            gradientUnits="userSpaceOnUse" x1="157.5606" y1="104.171" x2="205.7449" y2="104.171">
                             <stop offset="0" style="stop-color:#4F1FEC" />
                             <stop offset="1" style="stop-color:#A92FFB" />
                         </linearGradient>
-                        <ellipse style="fill:url(#SVGID_00000081629471340877122610000000893010847105872300_);" cx="181.7" cy="104.2"
-                            rx="24.1" ry="13.9" />
+                        <ellipse style="fill:url(#SVGID_00000081629471340877122610000000893010847105872300_);"
+                            cx="181.7" cy="104.2" rx="24.1" ry="13.9" />
                         <path class="st16" d="M168.6,96.4c9.4-5.4,24.7-5.4,34.1,0c0.1,0.1,0.2,0.1,0.3,0.2c-0.9-0.8-2-1.6-3.2-2.3
                         c-9.4-5.4-24.7-5.4-34.1,0c-9.3,5.4-9.4,14-0.3,19.5C159.4,108.4,160.4,101.1,168.6,96.4z" />
-                        <linearGradient id="SVGID_00000155833493964767618240000008903073274875761561_" gradientUnits="userSpaceOnUse"
-                            x1="158.7078" y1="97.82" x2="219.46" y2="97.82">
+                        <linearGradient id="SVGID_00000155833493964767618240000008903073274875761561_"
+                            gradientUnits="userSpaceOnUse" x1="158.7078" y1="97.82" x2="219.46" y2="97.82">
                             <stop offset="0" style="stop-color:#131060" />
                             <stop offset="0.1857" style="stop-color:#141062" />
                             <stop offset="0.2823" style="stop-color:#19106A" />
@@ -702,8 +739,8 @@
                         <path style="fill:url(#SVGID_00000155833493964767618240000008903073274875761561_);"
                             d="M165.8,96.7c9.4-5.4,24.7-5.4,34.1,0
                         c4.2,2.4,6.5,5.5,7,8.6c0.6-4-1.7-8-7-11c-9.4-5.4-24.7-5.4-34.1,0c-5.2,3-7.6,7.1-7,11C159.3,102.2,161.6,99.2,165.8,96.7z" />
-                        <radialGradient id="SVGID_00000117659118792686349970000001144043257122988943_" cx="145.7399" cy="90.4045"
-                            r="108.1645" gradientUnits="userSpaceOnUse">
+                        <radialGradient id="SVGID_00000117659118792686349970000001144043257122988943_" cx="145.7399"
+                            cy="90.4045" r="108.1645" gradientUnits="userSpaceOnUse">
                             <stop offset="0" style="stop-color:#E39A65" />
                             <stop offset="0.252" style="stop-color:#A92FFB" />
                             <stop offset="0.7357" style="stop-color:#3919BB" />
@@ -720,8 +757,8 @@
                         </g>
                         <path class="st29" d="M185.4,118.4h-5.2c-0.4,0-0.7-0.3-0.7-0.7v-0.1c0-0.4,0.3-0.7,0.7-0.7h5.2c0.4,0,0.7,0.3,0.7,0.7v0.1
                         C186,118.1,185.7,118.4,185.4,118.4z" />
-                        <linearGradient id="SVGID_00000040558869591792703420000018379266653843049351_" gradientUnits="userSpaceOnUse"
-                            x1="178.9827" y1="117.4271" x2="187.3873" y2="117.4271">
+                        <linearGradient id="SVGID_00000040558869591792703420000018379266653843049351_"
+                            gradientUnits="userSpaceOnUse" x1="178.9827" y1="117.4271" x2="187.3873" y2="117.4271">
                             <stop offset="0" style="stop-color:#131060" />
                             <stop offset="0.1857" style="stop-color:#141062" />
                             <stop offset="0.2823" style="stop-color:#19106A" />
@@ -1000,13 +1037,22 @@
                     <div class="card">
                         <div class="card-img"> </div>
                         <ul class="links">
-                            <a href="https://iglesialaverdadcomoestaescrita.com" target="_blank" rel="noopener noreferrer"><li><svg class="icon-link" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                </svg></li></a>
-                            <a href="https://github.com/MaxiG-dev/iglesia-ver-1" target="_blank" rel="noopener noreferrer"><li><svg class="icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M950.930286 512q0 143.433143-83.748571 257.974857t-216.283429 158.573714q-15.433143 2.852571-22.601143-4.022857t-7.168-17.115429l0-120.539429q0-55.442286-29.696-81.115429 32.548571-3.437714 58.587429-10.313143t53.686857-22.308571 46.299429-38.034286 30.281143-59.977143 11.702857-86.016q0-69.12-45.129143-117.686857 21.138286-52.004571-4.534857-116.589714-16.018286-5.12-46.299429 6.290286t-52.589714 25.161143l-21.723429 13.677714q-53.174857-14.848-109.714286-14.848t-109.714286 14.848q-9.142857-6.290286-24.283429-15.433143t-47.689143-22.016-49.152-7.68q-25.161143 64.585143-4.022857 116.589714-45.129143 48.566857-45.129143 117.686857 0 48.566857 11.702857 85.723429t29.988571 59.977143 46.006857 38.253714 53.686857 22.308571 58.587429 10.313143q-22.820571 20.553143-28.013714 58.88-11.995429 5.705143-25.746286 8.557714t-32.548571 2.852571-37.449143-12.288-31.744-35.693714q-10.825143-18.285714-27.721143-29.696t-28.306286-13.677714l-11.410286-1.682286q-11.995429 0-16.603429 2.56t-2.852571 6.582857 5.12 7.972571 7.460571 6.875429l4.022857 2.852571q12.580571 5.705143 24.868571 21.723429t17.993143 29.110857l5.705143 13.165714q7.460571 21.723429 25.161143 35.108571t38.253714 17.115429 39.716571 4.022857 31.744-1.974857l13.165714-2.267429q0 21.723429 0.292571 50.834286t0.292571 30.866286q0 10.313143-7.460571 17.115429t-22.820571 4.022857q-132.534857-44.032-216.283429-158.573714t-83.748571-257.974857q0-119.442286 58.88-220.306286t159.744-159.744 220.306286-58.88 220.306286 58.88 159.744 159.744 58.88 220.306286z">
-                                </svg></li></a>
+                            <a href="https://iglesialaverdadcomoestaescrita.com" target="_blank"
+                                rel="noopener noreferrer">
+                                <li><svg class="icon-link" viewBox="0 0 24 24" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg></li>
+                            </a>
+                            <a href="https://github.com/MaxiG-dev/iglesia-ver-1" target="_blank"
+                                rel="noopener noreferrer">
+                                <li><svg class="icon-github" viewBox="0 0 1024 1024" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M950.930286 512q0 143.433143-83.748571 257.974857t-216.283429 158.573714q-15.433143 2.852571-22.601143-4.022857t-7.168-17.115429l0-120.539429q0-55.442286-29.696-81.115429 32.548571-3.437714 58.587429-10.313143t53.686857-22.308571 46.299429-38.034286 30.281143-59.977143 11.702857-86.016q0-69.12-45.129143-117.686857 21.138286-52.004571-4.534857-116.589714-16.018286-5.12-46.299429 6.290286t-52.589714 25.161143l-21.723429 13.677714q-53.174857-14.848-109.714286-14.848t-109.714286 14.848q-9.142857-6.290286-24.283429-15.433143t-47.689143-22.016-49.152-7.68q-25.161143 64.585143-4.022857 116.589714-45.129143 48.566857-45.129143 117.686857 0 48.566857 11.702857 85.723429t29.988571 59.977143 46.006857 38.253714 53.686857 22.308571 58.587429 10.313143q-22.820571 20.553143-28.013714 58.88-11.995429 5.705143-25.746286 8.557714t-32.548571 2.852571-37.449143-12.288-31.744-35.693714q-10.825143-18.285714-27.721143-29.696t-28.306286-13.677714l-11.410286-1.682286q-11.995429 0-16.603429 2.56t-2.852571 6.582857 5.12 7.972571 7.460571 6.875429l4.022857 2.852571q12.580571 5.705143 24.868571 21.723429t17.993143 29.110857l5.705143 13.165714q7.460571 21.723429 25.161143 35.108571t38.253714 17.115429 39.716571 4.022857 31.744-1.974857l13.165714-2.267429q0 21.723429 0.292571 50.834286t0.292571 30.866286q0 10.313143-7.460571 17.115429t-22.820571 4.022857q-132.534857-44.032-216.283429-158.573714t-83.748571-257.974857q0-119.442286 58.88-220.306286t159.744-159.744 220.306286-58.88 220.306286 58.88 159.744 159.744 58.88 220.306286z">
+                                    </svg></li>
+                            </a>
                         </ul>
                         <div class="card-info">
                             <p class="card-title">Church Site | Radio Online</p>
@@ -1016,12 +1062,20 @@
                     <div class="card">
                         <div class="card-img"> </div>
                         <ul class="links">
-                            <a href="https://firexpc.com/" target="_blank" rel="noopener noreferrer"><li><svg class="icon-link" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                </svg></li></a>
-                            <a href="https://firexpc.com/" target="_blank" rel="noopener noreferrer"><li><svg class="icon-github" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0"/>
-                                </svg></li></a>
+                            <a href="https://firexpc.com/" target="_blank" rel="noopener noreferrer">
+                                <li><svg class="icon-link" viewBox="0 0 24 24" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg></li>
+                            </a>
+                            <a href="https://firexpc.com/" target="_blank" rel="noopener noreferrer">
+                                <li><svg class="icon-github" viewBox="0 0 24 24" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0" />
+                                    </svg></li>
+                            </a>
                         </ul>
                         <div class="card-info">
                             <p class="card-title">PC Store Online</p>
@@ -1251,13 +1305,18 @@
                     <div class="card">
                         <div class="card-img"> </div>
                         <ul class="links">
-                            <li style="cursor: not-allowed;" ><svg class="icon-link" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            <li style="cursor: not-allowed;"><svg class="icon-link" viewBox="0 0 24 24" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                 </svg></li>
-                            <a href="https://github.com/MaxiG-dev/portfolio" target="_blank" rel="noopener noreferrer"><li><svg class="icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M950.930286 512q0 143.433143-83.748571 257.974857t-216.283429 158.573714q-15.433143 2.852571-22.601143-4.022857t-7.168-17.115429l0-120.539429q0-55.442286-29.696-81.115429 32.548571-3.437714 58.587429-10.313143t53.686857-22.308571 46.299429-38.034286 30.281143-59.977143 11.702857-86.016q0-69.12-45.129143-117.686857 21.138286-52.004571-4.534857-116.589714-16.018286-5.12-46.299429 6.290286t-52.589714 25.161143l-21.723429 13.677714q-53.174857-14.848-109.714286-14.848t-109.714286 14.848q-9.142857-6.290286-24.283429-15.433143t-47.689143-22.016-49.152-7.68q-25.161143 64.585143-4.022857 116.589714-45.129143 48.566857-45.129143 117.686857 0 48.566857 11.702857 85.723429t29.988571 59.977143 46.006857 38.253714 53.686857 22.308571 58.587429 10.313143q-22.820571 20.553143-28.013714 58.88-11.995429 5.705143-25.746286 8.557714t-32.548571 2.852571-37.449143-12.288-31.744-35.693714q-10.825143-18.285714-27.721143-29.696t-28.306286-13.677714l-11.410286-1.682286q-11.995429 0-16.603429 2.56t-2.852571 6.582857 5.12 7.972571 7.460571 6.875429l4.022857 2.852571q12.580571 5.705143 24.868571 21.723429t17.993143 29.110857l5.705143 13.165714q7.460571 21.723429 25.161143 35.108571t38.253714 17.115429 39.716571 4.022857 31.744-1.974857l13.165714-2.267429q0 21.723429 0.292571 50.834286t0.292571 30.866286q0 10.313143-7.460571 17.115429t-22.820571 4.022857q-132.534857-44.032-216.283429-158.573714t-83.748571-257.974857q0-119.442286 58.88-220.306286t159.744-159.744 220.306286-58.88 220.306286 58.88 159.744 159.744 58.88 220.306286z">
-                                </svg></li></a>
+                            <a href="https://github.com/MaxiG-dev/portfolio" target="_blank" rel="noopener noreferrer">
+                                <li><svg class="icon-github" viewBox="0 0 1024 1024" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M950.930286 512q0 143.433143-83.748571 257.974857t-216.283429 158.573714q-15.433143 2.852571-22.601143-4.022857t-7.168-17.115429l0-120.539429q0-55.442286-29.696-81.115429 32.548571-3.437714 58.587429-10.313143t53.686857-22.308571 46.299429-38.034286 30.281143-59.977143 11.702857-86.016q0-69.12-45.129143-117.686857 21.138286-52.004571-4.534857-116.589714-16.018286-5.12-46.299429 6.290286t-52.589714 25.161143l-21.723429 13.677714q-53.174857-14.848-109.714286-14.848t-109.714286 14.848q-9.142857-6.290286-24.283429-15.433143t-47.689143-22.016-49.152-7.68q-25.161143 64.585143-4.022857 116.589714-45.129143 48.566857-45.129143 117.686857 0 48.566857 11.702857 85.723429t29.988571 59.977143 46.006857 38.253714 53.686857 22.308571 58.587429 10.313143q-22.820571 20.553143-28.013714 58.88-11.995429 5.705143-25.746286 8.557714t-32.548571 2.852571-37.449143-12.288-31.744-35.693714q-10.825143-18.285714-27.721143-29.696t-28.306286-13.677714l-11.410286-1.682286q-11.995429 0-16.603429 2.56t-2.852571 6.582857 5.12 7.972571 7.460571 6.875429l4.022857 2.852571q12.580571 5.705143 24.868571 21.723429t17.993143 29.110857l5.705143 13.165714q7.460571 21.723429 25.161143 35.108571t38.253714 17.115429 39.716571 4.022857 31.744-1.974857l13.165714-2.267429q0 21.723429 0.292571 50.834286t0.292571 30.866286q0 10.313143-7.460571 17.115429t-22.820571 4.022857q-132.534857-44.032-216.283429-158.573714t-83.748571-257.974857q0-119.442286 58.88-220.306286t159.744-159.744 220.306286-58.88 220.306286 58.88 159.744 159.744 58.88 220.306286z">
+                                    </svg></li>
+                            </a>
                         </ul>
                         <div class="card-info">
                             <p class="card-title">¡This Site!</p>
@@ -1267,13 +1326,20 @@
                     <div class="card">
                         <div class="card-img"> </div>
                         <ul class="links">
-                            <a href="https://app.maxig.dev/cursojs" target="_blank" rel="noopener noreferrer"><li><svg class="icon-link" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                </svg></li></a>
-                            <a href="https://github.com/MaxiG-dev/cursojs" target="_blank" rel="noopener noreferrer"><li><svg class="icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M950.930286 512q0 143.433143-83.748571 257.974857t-216.283429 158.573714q-15.433143 2.852571-22.601143-4.022857t-7.168-17.115429l0-120.539429q0-55.442286-29.696-81.115429 32.548571-3.437714 58.587429-10.313143t53.686857-22.308571 46.299429-38.034286 30.281143-59.977143 11.702857-86.016q0-69.12-45.129143-117.686857 21.138286-52.004571-4.534857-116.589714-16.018286-5.12-46.299429 6.290286t-52.589714 25.161143l-21.723429 13.677714q-53.174857-14.848-109.714286-14.848t-109.714286 14.848q-9.142857-6.290286-24.283429-15.433143t-47.689143-22.016-49.152-7.68q-25.161143 64.585143-4.022857 116.589714-45.129143 48.566857-45.129143 117.686857 0 48.566857 11.702857 85.723429t29.988571 59.977143 46.006857 38.253714 53.686857 22.308571 58.587429 10.313143q-22.820571 20.553143-28.013714 58.88-11.995429 5.705143-25.746286 8.557714t-32.548571 2.852571-37.449143-12.288-31.744-35.693714q-10.825143-18.285714-27.721143-29.696t-28.306286-13.677714l-11.410286-1.682286q-11.995429 0-16.603429 2.56t-2.852571 6.582857 5.12 7.972571 7.460571 6.875429l4.022857 2.852571q12.580571 5.705143 24.868571 21.723429t17.993143 29.110857l5.705143 13.165714q7.460571 21.723429 25.161143 35.108571t38.253714 17.115429 39.716571 4.022857 31.744-1.974857l13.165714-2.267429q0 21.723429 0.292571 50.834286t0.292571 30.866286q0 10.313143-7.460571 17.115429t-22.820571 4.022857q-132.534857-44.032-216.283429-158.573714t-83.748571-257.974857q0-119.442286 58.88-220.306286t159.744-159.744 220.306286-58.88 220.306286 58.88 159.744 159.744 58.88 220.306286z">
-                                </svg></li></a>
+                            <a href="https://app.maxig.dev/cursojs" target="_blank" rel="noopener noreferrer">
+                                <li><svg class="icon-link" viewBox="0 0 24 24" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg></li>
+                            </a>
+                            <a href="https://github.com/MaxiG-dev/cursojs" target="_blank" rel="noopener noreferrer">
+                                <li><svg class="icon-github" viewBox="0 0 1024 1024" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M950.930286 512q0 143.433143-83.748571 257.974857t-216.283429 158.573714q-15.433143 2.852571-22.601143-4.022857t-7.168-17.115429l0-120.539429q0-55.442286-29.696-81.115429 32.548571-3.437714 58.587429-10.313143t53.686857-22.308571 46.299429-38.034286 30.281143-59.977143 11.702857-86.016q0-69.12-45.129143-117.686857 21.138286-52.004571-4.534857-116.589714-16.018286-5.12-46.299429 6.290286t-52.589714 25.161143l-21.723429 13.677714q-53.174857-14.848-109.714286-14.848t-109.714286 14.848q-9.142857-6.290286-24.283429-15.433143t-47.689143-22.016-49.152-7.68q-25.161143 64.585143-4.022857 116.589714-45.129143 48.566857-45.129143 117.686857 0 48.566857 11.702857 85.723429t29.988571 59.977143 46.006857 38.253714 53.686857 22.308571 58.587429 10.313143q-22.820571 20.553143-28.013714 58.88-11.995429 5.705143-25.746286 8.557714t-32.548571 2.852571-37.449143-12.288-31.744-35.693714q-10.825143-18.285714-27.721143-29.696t-28.306286-13.677714l-11.410286-1.682286q-11.995429 0-16.603429 2.56t-2.852571 6.582857 5.12 7.972571 7.460571 6.875429l4.022857 2.852571q12.580571 5.705143 24.868571 21.723429t17.993143 29.110857l5.705143 13.165714q7.460571 21.723429 25.161143 35.108571t38.253714 17.115429 39.716571 4.022857 31.744-1.974857l13.165714-2.267429q0 21.723429 0.292571 50.834286t0.292571 30.866286q0 10.313143-7.460571 17.115429t-22.820571 4.022857q-132.534857-44.032-216.283429-158.573714t-83.748571-257.974857q0-119.442286 58.88-220.306286t159.744-159.744 220.306286-58.88 220.306286 58.88 159.744 159.744 58.88 220.306286z">
+                                    </svg></li>
+                            </a>
                         </ul>
                         <div class="card-info">
                             <p class="card-title">Course index of JS</p>
@@ -1510,98 +1576,114 @@
                     </div>
                 </div>
             </div>
-            <div class="aboutMe_container">
-                <div class="aboutMe__title">
-                    <h1>About me</h1>
-                </div>
-                <div class="aboutMe__lore">
-                    <p>The field of computing and programming fascinates me, and I'm constantly curious!
-                    Right now, I'm learning Java and diving into the world of backend.
-                    As someone who has an innate desire to learn and grow in this fascinating field, I am highly motivated and eager to continue my career!<br>
-                    You can see more details about me here!</p>
-                    <a style="text-decoration: none;" href="./README.md" download="CV Maximiliano González"><button class="aboutMe__button button">Download CV</button></a>
-                </div>
-                <div class="aboutMe__subtitle">
-                    <h2>My skills</h2>
-                </div>
-                <div class="aboutMe__skills">
-                    <div class="aboutMe__programing">
-                        <div class="aboutMe__skill">
-                            <img class="aboutMe__skillImg" src="./src/img/icons/html5.svg" alt="Icon HTML 5">
-                            <p class="aboutMe__skillText">HTML 5</p>
+            <div class="about-me__main-container">
+                <div class="aboutMe_container">
+                    <div class="aboutMe__title">
+                        <h1>About me</h1>
+                    </div>
+                    <div class="aboutMe__lore">
+                        <p>The field of computing and programming fascinates me, and I'm constantly curious!
+                            Right now, I'm learning Java and diving into the world of backend.
+                            As someone who has an innate desire to learn and grow in this fascinating field, I am highly
+                            motivated and eager to continue my career!<br>
+                            You can see more details about me here!</p>
+                        <a style="text-decoration: none;" href="./README.md" download="CV Maximiliano González"><button
+                                class="aboutMe__button button">Download CV</button></a>
+                    </div>
+                    <div class="aboutMe__subtitle">
+                        <h2>My skills</h2>
+                    </div>
+                    <div class="aboutMe__skills">
+                        <div class="aboutMe__programing">
+                            <div class="aboutMe__skill">
+                                <img class="aboutMe__skillImg" src="./src/img/icons/html5.svg" alt="Icon HTML 5">
+                                <p class="aboutMe__skillText">HTML 5</p>
+                            </div>
+                            <div class="aboutMe__skill">
+                                <img class="aboutMe__skillImg" src="./src/img/icons/css3.svg" alt="Icon CSS 3">
+                                <p class="aboutMe__skillText">CSS 3</p>
+                            </div>
+                            <div class="aboutMe__skill">
+                                <img class="aboutMe__skillImg" src="./src/img/icons/javascript.svg"
+                                    alt="Icon JavaScript">
+                                <p class="aboutMe__skillText">JavaScript</p>
+                            </div>
+                            <div class="aboutMe__skill">
+                                <img class="aboutMe__skillImg" src="./src/img/icons/typescript.svg"
+                                    alt="Icon TypeScript">
+                                <p class="aboutMe__skillText">TypeScript</p>
+                            </div>
+                            <div class="aboutMe__skill">
+                                <img class="aboutMe__skillImg" src="./src/img/icons/nodejs.svg" alt="Icon NodeJS">
+                                <p class="aboutMe__skillText">NodeJS</p>
+                            </div>
+                            <div class="aboutMe__skill">
+                                <img class="aboutMe__skillImg" src="./src/img/icons/mysql.svg" alt="Icon MySQL">
+                                <p class="aboutMe__skillText">MySQL</p>
+                            </div>
                         </div>
-                        <div class="aboutMe__skill">
-                            <img class="aboutMe__skillImg" src="./src/img/icons/css3.svg" alt="Icon CSS 3">
-                            <p class="aboutMe__skillText">CSS 3</p>
+                        <div class="aboutMe__wordpress">
+                            <div class="aboutMe__skill">
+                                <img class="aboutMe__skillImg" src="./src/img/icons/wordpress.svg" alt="Icon WordPress">
+                                <p class="aboutMe__skillText">WordPress</p>
+                            </div>
+                            <div class="aboutMe__skill">
+                                <img class="aboutMe__skillImg" src="./src/img/icons/woocommerce.svg"
+                                    alt="Icon WooCommerce">
+                                <p class="aboutMe__skillText">WooCommerce</p>
+                            </div>
+                            <div class="aboutMe__skill">
+                                <img class="aboutMe__skillImg" src="./src/img/icons/elementor.svg" alt="Icon Elementor">
+                                <p class="aboutMe__skillText">Elementor</p>
+                            </div>
                         </div>
-                        <div class="aboutMe__skill">
-                            <img class="aboutMe__skillImg" src="./src/img/icons/javascript.svg" alt="Icon JavaScript">
-                            <p class="aboutMe__skillText">JavaScript</p>
-                        </div>
-                        <div class="aboutMe__skill">
-                            <img class="aboutMe__skillImg" src="./src/img/icons/typescript.svg" alt="Icon TypeScript">
-                            <p class="aboutMe__skillText">TypeScript</p>
-                        </div>
-                        <div class="aboutMe__skill">
-                            <img class="aboutMe__skillImg" src="./src/img/icons/nodejs.svg" alt="Icon NodeJS">
-                            <p class="aboutMe__skillText">NodeJS</p>
-                        </div>
-                        <div class="aboutMe__skill">
-                            <img class="aboutMe__skillImg" src="./src/img/icons/mysql.svg" alt="Icon MySQL">
-                            <p class="aboutMe__skillText">MySQL</p>
+                        <div class="aboutMe__desing">
+                            <div class="aboutMe__skill">
+                                <img class="aboutMe__skillImg" src="./src/img/icons/adobepremierepro.svg"
+                                    alt="Icon Premier Pro">
+                                <p class="aboutMe__skillText">Premier Pro</p>
+                            </div>
+                            <div class="aboutMe__skill">
+                                <img class="aboutMe__skillImg" src="./src/img/icons/adobeaftereffects.svg"
+                                    alt="Icon After Effects">
+                                <p class="aboutMe__skillText">After Effects</p>
+                            </div>
+                            <div class="aboutMe__skill">
+                                <img class="aboutMe__skillImg" src="./src/img/icons/adobephotoshop.svg"
+                                    alt="Icon Photoshop">
+                                <p class="aboutMe__skillText">Photoshop</p>
+                            </div>
+                            <div class="aboutMe__skill">
+                                <img class="aboutMe__skillImg" src="./src/img/icons/adobeillustrator.svg"
+                                    alt="Icon Illustrator">
+                                <p class="aboutMe__skillText">Illustrator</p>
+                            </div>
+                            <div class="aboutMe__skill">
+                                <img class="aboutMe__skillImg" src="./src/img/icons/adobexd.svg" alt="Icon Adobe XD">
+                                <p class="aboutMe__skillText">Adobe XD</p>
+                            </div>
+                            <div class="aboutMe__skill">
+                                <img class="aboutMe__skillImg" src="./src/img/icons/figma.svg" alt="Icon Figma">
+                                <p class="aboutMe__skillText">Figma</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="aboutMe__wordpress">
-                        <div class="aboutMe__skill">
-                            <img class="aboutMe__skillImg" src="./src/img/icons/wordpress.svg" alt="Icon WordPress">
-                            <p class="aboutMe__skillText">WordPress</p>
-                        </div>
-                        <div class="aboutMe__skill">
-                            <img class="aboutMe__skillImg" src="./src/img/icons/woocommerce.svg" alt="Icon WooCommerce">
-                            <p class="aboutMe__skillText">WooCommerce</p>
-                        </div>
-                        <div class="aboutMe__skill">
-                            <img class="aboutMe__skillImg" src="./src/img/icons/elementor.svg" alt="Icon Elementor">
-                            <p class="aboutMe__skillText">Elementor</p>
-                        </div>
+                    <div class="aboutMe__subtitle">
+                        <h2>Find me in</h2>
                     </div>
-                    <div class="aboutMe__desing">
-                        <div class="aboutMe__skill">
-                            <img class="aboutMe__skillImg" src="./src/img/icons/adobepremierepro.svg" alt="Icon Premier Pro">
-                            <p class="aboutMe__skillText">Premier Pro</p>
-                        </div>
-                        <div class="aboutMe__skill">
-                            <img class="aboutMe__skillImg" src="./src/img/icons/adobeaftereffects.svg" alt="Icon After Effects">
-                            <p class="aboutMe__skillText">After Effects</p>
-                        </div>
-                        <div class="aboutMe__skill">
-                            <img class="aboutMe__skillImg" src="./src/img/icons/adobephotoshop.svg" alt="Icon Photoshop">
-                            <p class="aboutMe__skillText">Photoshop</p>
-                        </div>
-                        <div class="aboutMe__skill">
-                            <img class="aboutMe__skillImg" src="./src/img/icons/adobeillustrator.svg" alt="Icon Illustrator">
-                            <p class="aboutMe__skillText">Illustrator</p>
-                        </div>
-                        <div class="aboutMe__skill">
-                            <img class="aboutMe__skillImg" src="./src/img/icons/adobexd.svg" alt="Icon Adobe XD">
-                            <p class="aboutMe__skillText">Adobe XD</p>
-                        </div>
-                        <div class="aboutMe__skill">
-                            <img class="aboutMe__skillImg" src="./src/img/icons/figma.svg" alt="Icon Figma">
-                            <p class="aboutMe__skillText">Figma</p>
-                        </div>
+                    <div class="aboutMe__links">
+                        <a class="header-button" href="https://www.linkedin.com/in/maxig-dev/" target="_blank"
+                            rel="noopener noreferrer"><img src="./src/img/icons/linkedin.svg"
+                                alt="Linkedin MaxiG.dev"></a>
+                        <a class="header-button" href="https://github.com/MaxiG-dev" target="_blank"
+                            rel="noopener noreferrer"><img src="./src/img/icons/github.svg" alt="Github MaxiG.dev"></a>
+                        <a class="header-button" href="mailto:maxig.dev@gmail.com" target="_blank"
+                            rel="noopener noreferrer"><img src="./src/img/icons/gmail.svg" alt="Gmail MaxiG.dev"></a>
                     </div>
-                </div>
-                <div class="aboutMe__subtitle">
-                    <h2>Find me in</h2>
-                </div>
-                <div class="aboutMe__links">
-                    <a class="header-button" href="https://www.linkedin.com/in/maxig-dev/" target="_blank" rel="noopener noreferrer"><img src="./src/img/icons/linkedin.svg" alt="Linkedin MaxiG.dev"></a>
-                    <a class="header-button" href="https://github.com/MaxiG-dev" target="_blank" rel="noopener noreferrer"><img src="./src/img/icons/github.svg" alt="Github MaxiG.dev"></a>
-                    <a class="header-button" href="mailto:maxig.dev@gmail.com" target="_blank" rel="noopener noreferrer"><img src="./src/img/icons/gmail.svg" alt="Gmail MaxiG.dev"></a>
                 </div>
             </div>
         </section>
     </main>
 </body>
+
 </html>

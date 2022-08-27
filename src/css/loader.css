@@ -54,14 +54,10 @@
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    box-shadow: 0px 2px 3px -1px #fff,
-    0px 5px 5px -5px #008cff,
-    0px 20px 50px -20px #008cff,
-    0px 20px 80px -20px #008cff,
-    0px -2.5px 3px -1px #fff,
-    0px -5px 5px -5px #d000d4,
-    0px -20px 50px -5px #d000d4,
-    0px -20px 80px -5px #d000d4;
+    box-shadow: 0px 2px 3px -1px #fff, 0px 5px 5px -5px #008cff,
+        0px 20px 50px -20px #008cff, 0px 20px 80px -20px #008cff,
+        0px -2.5px 3px -1px #fff, 0px -5px 5px -5px #d000d4,
+        0px -20px 50px -5px #d000d4, 0px -20px 80px -5px #d000d4;
 }
 .loader__span {
     position: absolute;
@@ -217,7 +213,10 @@
 }
 /* ? Media queries */
 @media only screen and (max-width: 520px) {
-    .loader__row1, .loader__row2, .loader__row3, .loader__row4 {
+    .loader__row1,
+    .loader__row2,
+    .loader__row3,
+    .loader__row4 {
         height: 35px;
         width: 158.34px;
     }
@@ -226,7 +225,7 @@
     }
     .loader__container h1,
     .loader__container span p {
-        font-size: 2em!important;
+        font-size: 2em !important;
     }
     .loader__container {
         width: 280px;
@@ -241,8 +240,8 @@
         height: 280px;
     }
     .loader__help {
-        font-size: 0.9em!important;
-        top: 80%!important;
+        font-size: 0.9em !important;
+        top: 80% !important;
     }
     /* ? Animations mobile */
     @keyframes typing1 {
@@ -268,10 +267,12 @@
 }
 /* ? Animations */
 @keyframes blinkCursor {
-    0%,75% {
+    0%,
+    75% {
         opacity: 1;
     }
-    76%,100% {
+    76%,
+    100% {
         opacity: 0;
     }
 }
@@ -333,7 +334,7 @@
         box-shadow: 0px 0px 100px 0px rgb(25, 25, 25);
     }
     22% {
-    background: rgba(25, 25, 25, 0);
+        background: rgba(25, 25, 25, 0);
     }
     50% {
         color: white;
@@ -356,9 +357,12 @@
     }
 }
 @keyframes help {
-    0%,100% { opacity: 0.1
+    0%,
+    100% {
+        opacity: 0.1;
     }
-    50% { opacity: 1
+    50% {
+        opacity: 1;
     }
 }
 /* ? Animations mobile */
@@ -407,9 +411,12 @@
     }
     .loader__container h1,
     .loader__container span p {
-        font-size: 1.6em!important;
+        font-size: 1.6em !important;
     }
-    .loader__row1, .loader__row2, .loader__row3, .loader__row4 {
+    .loader__row1,
+    .loader__row2,
+    .loader__row3,
+    .loader__row4 {
         height: 35px;
         width: 134px;
     }

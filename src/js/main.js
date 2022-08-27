@@ -18,7 +18,7 @@ function loadPage() {
 function eventsListeners() {
     window.addEventListener('keypress', () => {
         startApp('click');
-    })
+    });
     container.addEventListener('click', () => {
         startApp('click');
     });
@@ -28,28 +28,30 @@ function eventsListeners() {
     document.querySelector('.speaker svg').addEventListener('click', () => {
         volumeControl('off');
     });
-    document.querySelector('.speaker svg:nth-child(2)').addEventListener('click', () => {
-        volumeControl('on');
-    });
+    document
+        .querySelector('.speaker svg:nth-child(2)')
+        .addEventListener('click', () => {
+            volumeControl('on');
+        });
 }
 function skipLoader() {
-        document.querySelector('.loader').classList.add('loader__skip');
-        document.querySelector('.loader__skip_button').classList.add('hidden');
-        audio2.play();
-        if (volume !== 0 ){
-            audio2.volume = volume-0.4;
-        }
-        setTimeout(() => {
-            initializingApp();
-            audio3.play();
-            document.querySelector('.speaker').classList.add('speaker-on');
-        }, 1000);
+    document.querySelector('.loader').classList.add('loader__skip');
+    document.querySelector('.loader__skip_button').classList.add('hidden');
+    audio2.play();
+    if (volume !== 0) {
+        audio2.volume = volume - 0.4;
+    }
+    setTimeout(() => {
+        initializingApp();
+        audio3.play();
+        document.querySelector('.speaker').classList.add('speaker-on');
+    }, 1000);
 }
 function initializingApp() {
     document.querySelector('.loader').remove();
     document.querySelector('.nav').classList.add('nav-on');
-    if (volume !== 0 ){
-        audio3.volume = volume-0.9;
+    if (volume !== 0) {
+        audio3.volume = volume - 0.9;
     }
     document.querySelector('.home').classList.remove('hidden');
     document.querySelector('.projects').classList.remove('hidden');
@@ -74,8 +76,8 @@ function startApp(e) {
         document.querySelector('.speaker').classList.add('speaker-on');
         audio1.play();
         audio1.currentTime = 0;
-        if (volume !== 0 ){
-            audio1.volume = volume-0.5;
+        if (volume !== 0) {
+            audio1.volume = volume - 0.5;
         }
         container.classList.add('loader__container-click');
         container.classList.add('startApp');
@@ -86,7 +88,8 @@ function startApp(e) {
     if (
         e === 'leave' &&
         document.querySelector('.loader') !== null &&
-        stateApp && stateApp !== 'initialized'
+        stateApp &&
+        stateApp !== 'initialized'
     ) {
         container.classList.add('loader__container-hover');
         container.classList.remove('loader__container-click');
@@ -118,11 +121,13 @@ function timeOutControl() {
         timeControl = setTimeout(() => {
             container.classList.remove('loader__container-click');
             container.classList.add('loader__container-out');
-            document.querySelector('.loader__skip_button').classList.add('hidden');
+            document
+                .querySelector('.loader__skip_button')
+                .classList.add('hidden');
             stateApp = 'initialized';
             audio2.play();
-            if (volume !== 0 ){
-                audio2.volume = volume-0.4;
+            if (volume !== 0) {
+                audio2.volume = volume - 0.4;
             }
             setTimeout(() => {
                 initializingApp();
@@ -138,16 +143,24 @@ function timeOutControlStop() {
 
 function volumeControl(e) {
     if (e === 'off') {
-        document.querySelector('.speaker svg:nth-child(1)').classList.add('hidden');
-        document.querySelector('.speaker svg:nth-child(2)').classList.remove('hidden');
+        document
+            .querySelector('.speaker svg:nth-child(1)')
+            .classList.add('hidden');
+        document
+            .querySelector('.speaker svg:nth-child(2)')
+            .classList.remove('hidden');
         volume = 0;
         audio1.volume = 0;
         audio2.volume = 0;
         audio3.volume = 0;
         audio4.volume = 0;
     } else {
-        document.querySelector('.speaker svg:nth-child(1)').classList.remove('hidden');
-        document.querySelector('.speaker svg:nth-child(2)').classList.add('hidden');
+        document
+            .querySelector('.speaker svg:nth-child(1)')
+            .classList.remove('hidden');
+        document
+            .querySelector('.speaker svg:nth-child(2)')
+            .classList.add('hidden');
         volume = 1;
         audio1.volume = 0.5;
         audio2.volume = 0.6;
@@ -157,11 +170,19 @@ function volumeControl(e) {
 }
 
 function scrollEvents() {
-    window.scrollTo(0, 15)
-    document.querySelector('.nav .section1').addEventListener('click', () => {scrollWin(0);});
-    document.querySelector('.nav .section2').addEventListener('click', () => {scrollWin(1);});
-    document.querySelector('.nav .section3').addEventListener('click', () => {scrollWin(2);});
-    document.querySelector('.nav .section4').addEventListener('click', () => {scrollWin(3);});
+    window.scrollTo(0, 15);
+    document.querySelector('.nav .section1').addEventListener('click', () => {
+        scrollWin(0);
+    });
+    document.querySelector('.nav .section2').addEventListener('click', () => {
+        scrollWin(1);
+    });
+    document.querySelector('.nav .section3').addEventListener('click', () => {
+        scrollWin(2);
+    });
+    document.querySelector('.nav .section4').addEventListener('click', () => {
+        scrollWin(3);
+    });
     window.addEventListener('scroll', () => {
         if (window.scrollY > 20 && stateAnimation === false) {
             stateAnimation = true;
@@ -169,19 +190,35 @@ function scrollEvents() {
                 window.scrollTo(0, 15);
                 stateAnimation = false;
             }, 500);
-            if (document.querySelector('.home').classList.contains('section-active')) {
-                scrollWin(1)
+            if (
+                document
+                    .querySelector('.home')
+                    .classList.contains('section-active')
+            ) {
+                scrollWin(1);
                 return;
             }
-            if (document.querySelector('.projects').classList.contains('section-active')) {
-                scrollWin(2)
+            if (
+                document
+                    .querySelector('.projects')
+                    .classList.contains('section-active')
+            ) {
+                scrollWin(2);
                 return;
             }
-            if (document.querySelector('.experiments').classList.contains('section-active')) {
-                scrollWin(3)
+            if (
+                document
+                    .querySelector('.experiments')
+                    .classList.contains('section-active')
+            ) {
+                scrollWin(3);
                 return;
             }
-            if (document.querySelector('.about-me').classList.contains('section-active')) {
+            if (
+                document
+                    .querySelector('.about-me')
+                    .classList.contains('section-active')
+            ) {
                 window.scrollTo(0, 15);
                 return;
             }
@@ -192,24 +229,40 @@ function scrollEvents() {
                 window.scrollTo(0, 15);
                 stateAnimation = false;
             }, 500);
-            if (document.querySelector('.home').classList.contains('section-active')) {
+            if (
+                document
+                    .querySelector('.home')
+                    .classList.contains('section-active')
+            ) {
                 window.scrollTo(0, 15);
                 return;
             }
-            if (document.querySelector('.projects').classList.contains('section-active')) {
-                scrollWin(0)
+            if (
+                document
+                    .querySelector('.projects')
+                    .classList.contains('section-active')
+            ) {
+                scrollWin(0);
                 return;
             }
-            if (document.querySelector('.experiments').classList.contains('section-active')) {
-                scrollWin(1)
+            if (
+                document
+                    .querySelector('.experiments')
+                    .classList.contains('section-active')
+            ) {
+                scrollWin(1);
                 return;
             }
-            if (document.querySelector('.about-me').classList.contains('section-active')) {
-                scrollWin(2)
+            if (
+                document
+                    .querySelector('.about-me')
+                    .classList.contains('section-active')
+            ) {
+                scrollWin(2);
                 return;
             }
         }
-    })
+    });
 }
 
 function scrollWin(e) {
@@ -219,7 +272,9 @@ function scrollWin(e) {
     function translateUp() {
         document.querySelector('.home').classList.remove('section-active');
         document.querySelector('.projects').classList.remove('section-active');
-        document.querySelector('.experiments').classList.remove('section-active');
+        document
+            .querySelector('.experiments')
+            .classList.remove('section-active');
         document.querySelector('.about-me').classList.remove('section-active');
         document.querySelector('.nav .section1').classList.remove('nav-active');
         document.querySelector('.nav .section2').classList.remove('nav-active');
