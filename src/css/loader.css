@@ -90,7 +90,6 @@
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
 }
-
 .loader__container {
     transition: transform 1000ms;
     -webkit-transition: transform 1000ms;
@@ -119,7 +118,6 @@
     -ms-transform: scale(3000%);
     -o-transform: scale(3000%);
 }
-
 .startAppBg {
     animation: startAppBg 10000ms infinite;
     -webkit-animation: startAppBg 10000ms infinite;
@@ -128,7 +126,6 @@
     animation: startApp 10000ms infinite;
     -webkit-animation: startApp 10000ms infinite;
 }
-
 .loader__row1,
 .loader__row2,
 .loader__row3,
@@ -144,7 +141,6 @@
     -ms-transform: translateX(16px);
     -o-transform: translateX(16px);
 }
-
 .loader__span p {
     opacity: 0;
     font-size: 4em;
@@ -156,7 +152,6 @@
     font-weight: bold;
     text-shadow: 0px 0px 5px #fff;
 }
-
 .loader__container h1 {
     text-shadow: 0px 0px 3px #fff;
     font-size: 4em;
@@ -167,7 +162,6 @@
     overflow: hidden;
     white-space: nowrap;
 }
-
 .loader__row1 h1 {
     animation: typing1 1000ms steps(8) both;
     -webkit-animation: typing1 1000ms steps(8) both;
@@ -221,10 +215,7 @@
     animation-delay: 5s;
     height: fit-content;
 }
-
-
 /* ? Media queries */
-
 @media only screen and (max-width: 520px) {
     .loader__row1, .loader__row2, .loader__row3, .loader__row4 {
         height: 35px;
@@ -275,7 +266,6 @@
         }
     }
 }
-
 /* ? Animations */
 @keyframes blinkCursor {
     0%,75% {
@@ -371,8 +361,7 @@
     50% { opacity: 1
     }
 }
-
-    /* ? Animations mobile */
+/* ? Animations mobile */
 @media only screen and (max-width: 520px) {
     @keyframes typing1 {
         0% {
