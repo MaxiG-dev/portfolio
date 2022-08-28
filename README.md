@@ -2,7 +2,8 @@
 <h1 align="center">👽 I'm Maxi 👽</h1>
 
 <h3 align="center"> ⚜ My personal portfolio ⚜ </h3>
-<img align="center" src="https://maxig.dev/src/img/previews/MaxiGdev.jpg">
+<h3 align="center"> <a href="https://maxig.dev" target="_blank" >💼 Go to portfolio 💼</a> </h3>
+<a href="https://maxig.dev" align="center" target="_blank" ><img align="center" src="https://maxig.dev/src/img/previews/MaxiGdev.jpg"></a>
 
 <h3 align="center"> ⚜ Technologies used in this project ⚜ </h3>
 <div align="center">
