@@ -124,6 +124,7 @@
 }
 .experiments__cards {
     padding-bottom: 3em;
+    min-height: 10em;
 }
 .experiments .title {
     padding: 30px 0px;
