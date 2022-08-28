@@ -1,7 +1,7 @@
 /*Card */
 .card {
     aspect-ratio: 16/9;
-    max-width: 520px;
+    max-width: 90%;
     max-height: 50%;
     margin: 10px auto;
     background: #f5f5f5;
