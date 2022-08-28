@@ -104,10 +104,21 @@
     margin-top: 3em;
     animation: slide-in-left 2s cubic-bezier(0, 0.83, 0, 1) both;
     -webkit-animation: slide-in-left 2s cubic-bezier(0, 0.83, 0, 1) both;
-    animation-delay: 4s;
+    animation-delay: 0s;
 }
 .home__links a {
     margin-right: 1em;
+    filter: saturate(0);
+    -webkit-filter: saturate(0);
+    transition: filter 500ms ease-in-out;
+    -webkit-transition: filter 500ms ease-in-out;
+    -moz-transition: filter 500ms ease-in-out;
+    -ms-transition: filter 500ms ease-in-out;
+    -o-transition: filter 500ms ease-in-out;
+}
+.home__links a:hover {
+    filter: saturate(1);
+    -webkit-filter: saturate(1);
 }
 .home__links img {
     width: 2em;
@@ -386,6 +397,10 @@
     }
     .home .contact {
         font-size: 1em;
+    }
+    .home__links a {
+        filter: saturate(1);
+        -webkit-filter: saturate(1);
     }
 }
 @media only screen and (max-width: 600px) {

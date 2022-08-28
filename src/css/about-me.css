@@ -150,12 +150,14 @@
 .aboutMe__links {
     margin-top: 0em;
     padding-bottom: 1.5em;
-}
-.aboutMe__links a {
-    margin-right: 1em;
+    display: flex;
+    justify-content: center;
 }
 .aboutMe__links img {
     width: 2em;
+}
+.aboutMe__links a {
+    margin: 0 0.5em;
 }
 .aboutMe__lore {
     width: 90%;
@@ -207,6 +209,10 @@
     }
     .aboutMe__skills {
         max-width: 400px;
+    }
+    .aboutMe__skill {
+        filter: saturate(1);
+        -webkit-filter: saturate(1);
     }
     .aboutMe__skillImg {
         width: 2em;
