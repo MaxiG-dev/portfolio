@@ -104,7 +104,7 @@
     margin-top: 3em;
     animation: slide-in-left 2s cubic-bezier(0, 0.83, 0, 1) both;
     -webkit-animation: slide-in-left 2s cubic-bezier(0, 0.83, 0, 1) both;
-    animation-delay: 0s;
+    animation-delay: 4s;
 }
 .home__links a {
     margin-right: 1em;

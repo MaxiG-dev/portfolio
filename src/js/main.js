@@ -1,9 +1,10 @@
 // ! Variables
-const container = document.querySelector('.loader__container');
-const audio1 = document.querySelector('#audio1');
-const audio2 = document.querySelector('#audio2');
-const audio3 = document.querySelector('#audio3');
-const audio4 = document.querySelector('#audio4');
+const $ = selector => document.querySelector(selector);
+const container = $('.loader__container');
+const audio1 = $('#audio1');
+const audio2 = $('#audio2');
+const audio3 = $('#audio3');
+const audio4 = $('#audio4');
 var timeControl;
 var stateAnimation = false;
 var stateTime = false;
@@ -25,7 +26,7 @@ function eventsListeners() {
     container.addEventListener('mouseleave', () => {
         startApp('leave');
     });
-    document.querySelector('.speaker svg').addEventListener('click', () => {
+    $('.speaker svg').addEventListener('click', () => {
         volumeControl('off');
     });
     document
@@ -35,8 +36,8 @@ function eventsListeners() {
         });
 }
 function skipLoader() {
-    document.querySelector('.loader').classList.add('loader__skip');
-    document.querySelector('.loader__skip_button').classList.add('hidden');
+    $('.loader').classList.add('loader__skip');
+    $('.loader__skip_button').classList.add('hidden');
     audio2.play();
     if (volume !== 0) {
         audio2.volume = volume - 0.4;
@@ -44,19 +45,19 @@ function skipLoader() {
     setTimeout(() => {
         initializingApp();
         audio3.play();
-        document.querySelector('.speaker').classList.add('speaker-on');
+        $('.speaker').classList.add('speaker-on');
     }, 1000);
 }
 function initializingApp() {
-    document.querySelector('.loader').remove();
-    document.querySelector('.nav').classList.add('nav-on');
+    $('.loader').remove();
+    $('.nav').classList.add('nav-on');
     if (volume !== 0) {
         audio3.volume = volume - 0.9;
     }
-    document.querySelector('.home').classList.remove('hidden');
-    document.querySelector('.projects').classList.remove('hidden');
-    document.querySelector('.experiments').classList.remove('hidden');
-    document.querySelector('.about-me').classList.remove('hidden');
+    $('.home').classList.remove('hidden');
+    $('.projects').classList.remove('hidden');
+    $('.experiments').classList.remove('hidden');
+    $('.about-me').classList.remove('hidden');
     app();
 }
 
@@ -69,11 +70,11 @@ function app() {
 function startApp(e) {
     if (
         e === 'click' &&
-        document.querySelector('.loader') !== null &&
+        $('.loader') !== null &&
         stateApp === false
     ) {
         stateApp = true;
-        document.querySelector('.speaker').classList.add('speaker-on');
+        $('.speaker').classList.add('speaker-on');
         audio1.play();
         audio1.currentTime = 0;
         if (volume !== 0) {
@@ -82,12 +83,12 @@ function startApp(e) {
         container.classList.add('loader__container-click');
         container.classList.add('startApp');
         container.classList.remove('loader__container-hover');
-        document.querySelector('.loader').classList.add('startAppBg');
+        $('.loader').classList.add('startAppBg');
         timeOutControl();
     }
     if (
         e === 'leave' &&
-        document.querySelector('.loader') !== null &&
+        $('.loader') !== null &&
         stateApp &&
         stateApp !== 'initialized'
     ) {
@@ -95,7 +96,7 @@ function startApp(e) {
         container.classList.remove('loader__container-click');
         container.classList.remove('loader__container-out');
         container.classList.remove('startApp');
-        document.querySelector('.loader').classList.remove('startAppBg');
+        $('.loader').classList.remove('startAppBg');
         if (audio1.volume >= 0.5) {
             const timeInterval = setInterval(() => {
                 if (audio1.volume > 0) {
@@ -171,16 +172,16 @@ function volumeControl(e) {
 
 function scrollEvents() {
     window.scrollTo(0, 15);
-    document.querySelector('.nav .section1').addEventListener('click', () => {
+    $('.nav .section1').addEventListener('click', () => {
         scrollWin(0);
     });
-    document.querySelector('.nav .section2').addEventListener('click', () => {
+    $('.nav .section2').addEventListener('click', () => {
         scrollWin(1);
     });
-    document.querySelector('.nav .section3').addEventListener('click', () => {
+    $('.nav .section3').addEventListener('click', () => {
         scrollWin(2);
     });
-    document.querySelector('.nav .section4').addEventListener('click', () => {
+    $('.nav .section4').addEventListener('click', () => {
         scrollWin(3);
     });
     window.addEventListener('scroll', () => {
@@ -270,35 +271,35 @@ function scrollWin(e) {
     audio4.currentTime = 0;
     audio4.play();
     function translateUp() {
-        document.querySelector('.home').classList.remove('section-active');
-        document.querySelector('.projects').classList.remove('section-active');
+        $('.home').classList.remove('section-active');
+        $('.projects').classList.remove('section-active');
         document
             .querySelector('.experiments')
             .classList.remove('section-active');
-        document.querySelector('.about-me').classList.remove('section-active');
-        document.querySelector('.nav .section1').classList.remove('nav-active');
-        document.querySelector('.nav .section2').classList.remove('nav-active');
-        document.querySelector('.nav .section3').classList.remove('nav-active');
-        document.querySelector('.nav .section4').classList.remove('nav-active');
+        $('.about-me').classList.remove('section-active');
+        $('.nav .section1').classList.remove('nav-active');
+        $('.nav .section2').classList.remove('nav-active');
+        $('.nav .section3').classList.remove('nav-active');
+        $('.nav .section4').classList.remove('nav-active');
     }
     if (e === 0) {
         translateUp();
-        document.querySelector('.home').classList.add('section-active');
-        document.querySelector('.nav .section1').classList.add('nav-active');
+        $('.home').classList.add('section-active');
+        $('.nav .section1').classList.add('nav-active');
     }
     if (e === 1) {
         translateUp();
-        document.querySelector('.projects').classList.add('section-active');
-        document.querySelector('.nav .section2').classList.add('nav-active');
+        $('.projects').classList.add('section-active');
+        $('.nav .section2').classList.add('nav-active');
     }
     if (e === 2) {
         translateUp();
-        document.querySelector('.experiments').classList.add('section-active');
-        document.querySelector('.nav .section3').classList.add('nav-active');
+        $('.experiments').classList.add('section-active');
+        $('.nav .section3').classList.add('nav-active');
     }
     if (e === 3) {
         translateUp();
-        document.querySelector('.about-me').classList.add('section-active');
-        document.querySelector('.nav .section4').classList.add('nav-active');
+        $('.about-me').classList.add('section-active');
+        $('.nav .section4').classList.add('nav-active');
     }
 }

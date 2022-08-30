@@ -22,11 +22,14 @@
     -o-transition: opacity 500ms;
 }
 .loader__skip_button {
+    border-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.2);
     position: absolute;
     bottom: 0;
     margin-bottom: 2em;
-    opacity: 0.2;
     z-index: -1;
+    animation: show-off 10s linear;
+    -webkit-animation: show-off 10s linear;
 }
 .loader__container {
     position: relative;
@@ -362,6 +365,18 @@
         opacity: 0.1;
     }
     50% {
+        opacity: 1;
+    }
+}
+@keyframes show-off {
+    0%,
+    50% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0.3;
+    }
+    100% {
         opacity: 1;
     }
 }
