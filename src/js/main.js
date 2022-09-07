@@ -303,3 +303,25 @@ function scrollWin(e) {
         $('.nav .section4').classList.add('nav-active');
     }
 }
+
+
+// const card_container = $('.card_container');
+// const card = $('#test');
+
+// const { width, height } = document.body.getBoundingClientRect();
+
+// const halfWidth = width / 2;
+// const halfHeight = height / 2;
+
+// card_container.addEventListener('mousemove', (e) => {
+//     const {offsetX, offsetY} = e
+//     const rotationX = ((offsetX - halfWidth) / halfWidth) * 10
+//     const rotationY = ((offsetY - halfHeight) / halfHeight) * 10
+//     console.log(width);
+
+//     card.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg) `
+// });
+
+// card_container.addEventListener('mouseleave', () => {
+//     card.style.transform = `rotateX(0deg) rotateY(0deg) `
+// });
